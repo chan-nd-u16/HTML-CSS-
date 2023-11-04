@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .big{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+        }
+        .small{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+        }
+        .anobig{
+            height: 300px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent" style="display: flex;">
+
+        <div class="big" draggable="true">
+    
+        </div>
+        <div class="anobig" style="background-color: black;">
+            <div class="small" draggable="true">
+    
+            </div>
+
+        </div>
+    </div>
+    <!-- <div class="anobig">
+        <h1>vbnm</h1>
+
+    </div> -->
+    
+</body>
+<script>
+    // let ab=''
+    let bigelement=document.getElementsByClassName('big')[0]
+    let smallelement=document.getElementsByClassName('small')[0]
+    smallelement.addEventListener('dragstart',function(e){
+        drag=e.target
+        // console.log(drag)
+    })
+    bigelement.addEventListener('dragover',function(e){
+        e.preventDefault()
+    })
+    bigelement.addEventListener('drop',function(e){
+        bigelement.appendChild(drag)
+        drag=null
+    })
+
+    let ano=document.getElementsByClassName('anobig')[0]
+    ano.addEventListener('dragstart',function(e){
+        drag1=e.target
+        console.log(drag1)
+    })
+    ano.addEventListener('dragover',function(e){
+        e.preventDefault()
+    })
+    ano.addEventListener('drop',function(e){
+        ano.appendChild(drag1)
+        drag=null
+    })
+   
+    
+
+
+</script>
+</html>
