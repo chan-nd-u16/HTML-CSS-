@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="random()">change color</button>
+    <script>
+        function random(){
+
+                let hexcode='ABCDEF0123456789'
+                let bl=""
+                for(let i=0;i<6;i++){
+                    // console.log(hexcode[Math.floor(Math.random()*6)])
+                    bl+=hexcode[Math.floor(Math.random()*(hexcode.length))]
+                }
+                document.body.style.backgroundColor="#"+bl
+
+           
+
+        }
+
+    </script>
+    
+</body>
+</html>

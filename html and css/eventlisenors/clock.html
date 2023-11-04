@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+    <style>
+      body{
+        font-family: 'Tilt Prism', cursive;
+        background-color: aliceblue;
+        /* font-style: bold; */
+      }
+      .parent{
+        text-align: center;
+        padding: 20% 20%  0% 20%;
+        align-items: center;
+        /* display: flex; */
+      }
+      .clock{
+        display: inline-flex;
+        justify-content: center;
+        text-align: center;
+        /* border: 2px solid black; */
+        background-color: rgba(0, 0, 0, 0.164);
+        border-radius: 10px;
+        
+      }
+      .clock h1{
+        margin: 0 15px;
+        text-align: center;
+        
+      }
+    </style>
+</head>
+<body>
+  
+      
+    <div class="parent">
+      <div style="margin-left: 5%;">
+
+        <label for="inp">Enter any day</label>
+            <input type="text" name="inp" class="ii" placeholder="YYYY-MM-DD">
+            <button onclick="findday()">Find</button>
+            <h3 class="daa" style="margin-left: 5%;"></h3>
+      </div>
+      
+        <div class="clock">
+            <h1 class="day"></h1>
+            <h1 class="hour"></h1>
+            <h1 class="bar1">:</h1>
+            <h1 class="minutes"></h1>
+            <h1 class="bar2">:</h1>
+            <h1 class="sec"></h1>
+            <h1 class="ampm"></h1>
+        </div>
+        
+    </div>
+    <button type="button" class="btn btn-secondary btn-sm" style="margin: 2% 45% ;" onclick="random()">change color</button>
+    
+
+    <script>
+        function findday(){
+          let dat= document.getElementsByClassName('ii')[0].value
+          let sel=new Date(dat)
+          let dayno=sel.getDay()
+          week=['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY ']
+          document.getElementsByClassName('daa')[0].innerHTML=week[dayno]
+        
+
+        }
+
+        window.addEventListener('load',digitalclock)
+        function digitalclock(){
+
+            let date= new Date()
+            let dayno=date.getDay()
+            let hour=date.getHours()
+            let minutes=date.getMinutes()
+            let sec=date.getSeconds()
+            let ampm= hour>=12? 'PM':'AM'
+            let week=['SUN','MON','TUES','WED','THURS','FRI','SAT']
+
+            hour=hour%12
+
+            hour=hour<10? '0'+hour:hour
+            minutes=minutes<10? '0'+minutes:minutes
+            sec=sec<10? '0'+sec:sec
+
+          // console.log(week[dayno])
+            document.getElementsByClassName('day')[0].innerHTML=week[dayno]
+            document.getElementsByClassName('hour')[0].innerHTML=hour
+            document.getElementsByClassName('minutes')[0].innerHTML=minutes
+            document.getElementsByClassName('sec')[0].innerHTML=sec
+            document.getElementsByClassName('ampm')[0].innerHTML=ampm
+
+            setTimeout(digitalclock,200)
+        }
+        function random(){
+
+            let hexcode='ABCDEF0123456789'
+            let bl=""
+            for(let i=0;i<6;i++){
+                // console.log(hexcode[Math.floor(Math.random()*6)])
+                bl+=hexcode[Math.floor(Math.random()*(hexcode.length))]
+            }
+            document.body.style.backgroundColor="#"+bl
+
+
+
+}
+
+        
+    </script>
+</body>
+</html>

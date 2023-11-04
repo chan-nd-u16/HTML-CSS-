@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ubereats</title>
+    <link rel="icon" href="https://seeklogo.com/images/U/uber-eats-logo-39748746B7-seeklogo.com.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            
+        }
+        /* .parent{
+            position: relative;
+            top: -600px;
+        }
+        #check:checked ~ .nav{
+            position: relative;
+            left: 0px;
+            transition: 2s;
+        } */
+        
+        .home{
+            height:608px ;
+            width:100% ;
+        }
+        .home .menu #check{
+                display: none;
+            }
+        .image{
+            height: 608px;
+            width: 100%;
+            /* z-index: 1; */
+
+        }
+        .home .logo{
+
+            position: relative;
+            top:-700px;
+            margin-left: 70px;
+            /* z-index: 1; */
+        }
+        .menu{
+            /* z-index: 2; */
+            position: relative;
+            top:-725px;
+            margin-left: 30px;
+        }
+        .user{
+            height: 35px;
+            width: 73px;
+            background-color: white;
+            border-radius: 15px;
+            position: relative;
+            top:-750px;
+            left: 70%
+            
+         
+        }
+        .user:hover{
+            opacity: 0.8;
+        }
+        .bar{
+            display: inline;
+            left: 70px;
+            z-index: 5;
+            
+            position: relative;
+            top: -380px;
+        }
+        .home .eat .bar .search{
+            width: 300px;
+            height: 40px;
+
+        }
+        .home .eat .bar .delivery{
+            width: 300px;
+            height: 45px;
+
+        }
+        .button{
+            height:40px;
+            background-color: black;
+            width: 100px;
+            position: relative;
+            /* left: 10%; */
+            top: -25%;
+            border-radius: 10px;
+        }
+        .but{
+            text-decoration:none;color:white;
+            position: relative;
+            left:14px;top:8px;
+        }
+        .but:hover{
+            opacity: 0.5;
+        }
+
+        .hh{
+            /* text-align: center; */
+
+            /* font-size: 40px; */
+            font-family:sans-serif;
+        }
+        .login{
+            position: relative;
+            left: 28px;
+            top: -16px;
+            
+        }
+        .signup{
+            height: 35px;
+            width: 73px;
+            background-color:black;
+            border-radius: 15px;
+            position: relative;
+            top:-784px;
+            left: 87%
+   
+        }
+        .sign{
+           margin-left: 10px;
+           position: relative;
+           top: 5px;
+            
+        }
+        .signup:hover{
+            opacity: 0.5;
+            
+        }
+        .photo1{
+        height: 33.3%;
+        width: 33.3%;
+        box-shadow: 2px 2px 2px 2px;
+        color: black;
+
+    }
+    .photo2{
+        height: 33.3%;
+        width: 33.3%;
+
+    }
+    .photo3{
+        height: 33.3%;
+        width: 33.3%;
+
+    }
+    .grid{
+        display: flex;
+        /* grid-template-columns: 400px 400px 400px; */
+        /* margin: 20px; */
+        padding: 5%;
+        gap: 40px;
+       
+
+    }
+    .grid2{
+        
+        display: flex;
+        /* grid-template-columns: 400px 400px 400px; */
+        
+        margin: 20px;
+    }
+    .word{
+        
+        color: black;
+    }
+    .gmap{
+        margin: 20px;
+        padding: 50px;
+    }
+    .map{
+        height: 350px;
+        width: 100%;
+    }
+    .list{
+        display: flex;
+    
+        /* margin: 20px; */
+        
+    }
+    .list1{
+        list-style: none;
+        padding: 5%;
+        
+    }
+    .countries{
+        display: flex;
+        /* margin: 20px; */
+        /* position: relative;
+        top: -100px; */
+        padding: 7%;
+
+    }
+    .count{
+        list-style:none;
+        /* margin:70px; */
+    }
+    .last{
+        display: flex;
+        margin:20px;
+    }
+    .lis{
+        list-style: none;
+        /* margin: 70px; */
+        
+    }
+    
+    .perusu{
+        display: flex;
+    }
+    .sirusu{
+        display: flex;
+    }
+    .googleplay{
+        width: 150px;
+        height: 40px;
+
+    }
+    .perusu .log{
+        position: relative;
+        top: 80px;
+        margin: 20px;
+    }
+    .sirusu .googleplay{
+        position: relative;
+        top: 180px;
+    }
+    .sirusu .apple{
+        position: relative;
+        top: 180px;
+    }
+    .social{
+        display: inline-flex;
+        padding: 25px;
+    }
+
+    
+    .face{
+        margin: 10px;
+    }
+    .twitter{
+        margin: 10px;
+
+    }
+    .insta{
+        margin: 10px;
+    }
+    .pri{
+        display: flex;
+    
+        margin-left:7%;
+    
+    }
+    .policy{
+        padding-left: 7%;
+    }
+    .team{
+        display: inline-flex;
+        margin: 10px;
+        margin-left:20px;
+    }
+    .pa{
+        display: flex;
+    }
+    /* .nav{
+        background-color: red;
+        height: 600px;
+        width: 300px;
+        position: relative;
+        left: -350px;
+    } */
+    /* .photo1:hover{
+        height:300px;
+        wid 400px;
+    } */
+    @media(max-width:590px){
+        .pa{
+            display: block;
+        }
+        .perusu{
+            display: block;
+            /* position: relative;
+            top: 20%; */
+            /* padding-top: 7%; */
+        }
+        .sirusu{
+            display: block;
+            position: relative;
+            top:80px;
+            
+        }
+        .last{
+            position: relative;
+            top: 10%;
+        }
+        .list{
+            display: block;
+            padding: 20%;
+            
+        }
+        .countries{
+            display: block;
+            padding: 20%;
+        }
+        .policy{
+            padding:5%
+        }
+        .grid{
+            display: block;
+            padding: 20%;
+        }
+        /* .hh{
+            font-size: 30px;
+        } */
+
+
+
+    }
+    
+
+
+    </style>
+</head>
+<body>
+    
+    <!-- <div class="nav">
+
+    </div> -->
+    <div class="home" style="background-color:black">
+        <div class="eat">
+            <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/3dec1d1b7e1b5874.png" alt="homepage image" class="image">
+            <div class="bar">
+                
+                <h2 class="hh">ORDER FOOD TO YOUR DOOR</h2>
+                
+                <input role="combobox"placeholder="Enter delivery address"class="search">
+                <select name="search" class="delivery">
+                    <option>Deliver Now</option>
+                    <option>Schedule for later</option>
+                    
+                </select>
+                <p><a href="#" style="text-decoration: none;">sign up</a><b> for your recent addresses</b></p>
+                <div class="button"> <a href="#" class="but">Find Food</a></div>
+
+            </div>
+            
+        </div>
+        <div class="logo">
+            <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/97c43f8974e6c876.svg" alt="logo">
+        </div>
+        <div class="menu">
+            <input type="checkbox" name="" id="check">
+            
+            <label for="check" class="lab">
+                <i class="fa-solid fa-bars"></i>
+
+            </label>   
+        </div>
+        <div class="user">
+            <img width="20" height="20" style="position: relative;left:7px;top: 6px;" src="https://img.icons8.com/material-sharp/24/user.png" alt="user"/>
+            <a href="#" style="font-style: none;color: black;"><p class="login"><b>log in</b></p></a>
+        </div>
+        <div class="signup">
+            
+            <a href="#" style="font-style: none;color: white;"><p class="sign"><b>signup</b></p></a>
+        </div>
+    </div>
+    <div class="grid">
+
+        <!-- <div class="photo1"><img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/88d55f7112efe55f.webp" alt="" class=" img-thumbnail"></div>
+        <div class="photo2"><img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/711d51ca1b458931.webp" alt="" class=" img-thumbnail"></div>
+        <div class="photo2"><img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/16522a701585873b.webp" alt="" class=" img-thumbnail"></div> -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/88d55f7112efe55f.webp" class="card-img-top" alt="..." style="width: 90%;height: 220px;">
+            <div class="card-body">
+              <p class="card-text">Feed your employees.</p>
+              <p class="card-text"><a href="#"class="word">Create a business account</a></p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/711d51ca1b458931.webp" class="card-img-top" alt="..." style="width: 90%;height: 220px;">
+            <div class="card-body">
+              <p class="card-text">your restaurant,delivery</p>
+              <p class="card-text"><a href="#"class="word">Add your restaurant</a></p>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/16522a701585873b.webp" class="card-img-top" alt="..." style="width: 90%;height: 220px;">
+            <div class="card-body">
+              <p class="card-text">Deliver with Uber Eats.</p>
+              <p class="card-text"><a href="#"class="word">Sign up to deliver</a></p>
+            </div>
+          </div>
+    </div>
+    <!-- <div class="grid2">
+        <div class="word1"><h3>Feed your employees</h3></div>
+        <div class="word2"><h3>your restaurant,delivery</h3></div>
+        <div class="word3"><h3>Deliver with Uber Eats</h3></div>
+
+    </div>
+    <div class="grid2">
+        <div class="word"><a href="#"class="word">Create a business account</a></div>
+        <div class="word"><a href="#"class="word">Add your restaurant</a></div>
+        <div class="word"><a href="#"class="word">Sign up to deliver</a></div>
+    </div> -->
+    <div class="gmap">
+        <h2>Cities near me </h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15556.7669107561!2d77.62629597385698!3d12.895389865286806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14bc1f875dd5%3A0x2b126387f21954a7!2sGarvebhavi%20Palya%2C%20Bengaluru%2C%20Karnataka%20560068!5e0!3m2!1sen!2sin!4v1691350884970!5m2!1sen!2sin" width="70%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+
+        </iframe>
+
+    </div>
+    <div class="list">
+        <ul class="list1">
+            <li>Akron</li><BR></BR>
+            <li>Albuquerque</li><BR></BR>
+            <li>Bridgeport</li><BR></BR>
+            <li>Concord</li><BR></BR>
+            <li>Dayton</li><BR></BR>
+            <li>El Paso</li>
+        </ul>
+        <ul class="list1">
+            <li>Hartford</li><BR></BR>
+            <li>Houston</li><BR></BR>
+            <li>Indianapolis</li><BR></BR>
+            <li>McAllen</li><BR></BR>
+            <li>Mesa</li><BR></BR>
+            <li>Milwaukee</li>
+        </ul>
+        <ul class="list1">
+            <li>Nashville</li><BR></BR>
+            <li>New Orleans</li><BR></BR>
+            <li>Oklahoma City</li><BR></BR>
+            <li>Omaha</li><BR></BR>
+            <li>Orlando</li><br><br>
+            <li>Palm Bay</li>
+        </ul>
+        <ul class="list1">
+            <li>Providence</li><BR></BR>
+            <li>Queens</li><BR></BR>
+            <li>San Antonio</li><BR></BR>
+            <li>Stony Brook</li><BR></BR>
+            <li>Tucson</li><BR></BR>
+            <li>West Hollywood</li>
+        </ul>
+
+    </div>
+    <h2 style="margin-left: 7%;">Countries with ubereats</h2>
+    <div class="countries">
+        
+        <ul class="count">
+            <li>Australia</li><br></br>
+            <li>Belgium</li><br></br>
+            <li>Canada</li><br></br>
+            <li>Chile</li><br></br>
+            <li>Costa Rica</li><br></br>
+            <li>Dominican Republic</li><br></br>
+            <li>Ecuador</li><br></br>
+            <li>El Salvador</li><br></br>
+        </ul>
+        <ul class="count">
+            <li>France</li><br></br>
+            <li>Germany</li><br></br>
+            <li>Guatemala</li><br></br>
+            <li>Ireland</li><br></br>
+            <li>Italy</li><br></br>
+            <li>Japan</li><br></br>
+            <li>Kenya</li><br></br>
+            <li>Mexico</li><br></br>
+        </ul>
+        <ul class="count">
+            <li>Netherlands</li><br><br>
+            <li>New Zealand</li><br><br>
+            <li>Panama</li><br><br>
+            <li>Poland</li><br><br>
+            <li>Portugal</li><br><br>
+            <li>South Africa</li><br><br>
+            <li>Spain</li><br><br>
+            <li>Sri Lanka</li><br><br>
+        </ul>
+        <ul class="count">
+            <li>Sweden</li><br><br>
+            <li>Switzerland</li><br><br>
+            <li>Taiwan (ROC)</li><br><br>
+            <li>United Kingdom</li><br><br>
+            <li>United States</li><br><br>
+            
+        </ul>
+
+    </div>
+    <hr>
+    <div class="perusu">
+        <div class="log">
+            <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/97c43f8974e6c876.svg" alt="logo">
+            <div class="sirusu">
+                <div><img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/163bdc9b0f1e7c9e.png" alt="logo" class="googleplay"></div>
+                <div> <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/783bb4a82e5be29e.svg" alt="logo" class="apple"></div>
+            </div>
+            
+           
+            
+        </div>
+        <div class="last">
+            <ul class="lis">
+                <li><a href="#"class="lin">Get help</a></li><br>
+                <li><a href="#"class="lin">Buy gift cards</a></li><br>
+                <li><a href="#"class="lin">Add your restaurant</a></li><br>
+                <li><a href="#"class="lin">Sign up to deliver</a></li><br>
+                <li><a href="#"class="lin">Create a business account</a></li><br>
+                <li><a href="#"class="lin">Promotions</a></li><br>
+            </ul>
+            <ul class="lis">
+                <li><a href="#"class="lin">Restaurants near me</a></li><br><br>
+                <li><a href="#"class="lin">View all cities</a></li><br><br>
+                <li><a href="#"class="lin">View all countries</a></li><br><br>
+                <li><a href="#"class="lin">Pickup near me</a></li><br><br>
+                <li><a href="#"class="lin">About Uber Eats</a></li><br><br>
+                <li><a href="#"class="lin">English</a></li><br><br>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="pa">
+
+        <div class="social">
+            
+            <div class="face">
+                <label for="" class="so">
+                    <i class="fa-brands fa-facebook"></i>  
+                    
+                </label> 
+                
+            </div>
+            <div class="twitter">
+            <label for="" class="so">
+                <i class="fa-brands fa-twitter"></i>
+        
+                </label> 
+                
+        </div>
+        
+        <div class="insta">
+            
+            <label for="" class="so">
+                <i class="fa-brands fa-instagram"></i>    
+                
+            </label> 
+        </div>
+    </div>
+    <div class="policy">
+
+        
+        <div>
+            <ul class="pri">
+                <li  class="pri">Privacy Policy</li><br><br>
+                <li class="pri">Terms</li><br><br>
+                <li class="pri">Pricing</li><br><br>
+                <li class="pri">Do not sell or share my personal information</li><br><br>
+            </ul>
+        </div>
+        <div>
+            <ul class="team">
+                <li class="team">This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</li>
+                <li class="team">© 2023 Uber Technologies Inc.</li>
+            </ul>
+            
+        </div>
+        
+    </div>
+    
+    
+</div>
+
+</body>
+</html>

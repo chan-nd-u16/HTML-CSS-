@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: white;
+            background-color: rgb(186, 58, 186);
+        }
+        button{
+            color: white;
+            background-color: green;
+            border-radius: 10px;
+            padding: 5px;
+            box-shadow: 15px;
+        }
+        .parent{
+            display: flex;
+            gap: 40px;
+        }
+        .card1{
+            height: 100px;
+            width: 100px;
+            border-radius: 10px;
+            background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+        }
+        .card2{
+            height: 120px;
+            width: 100px;
+            border-radius: 10px;
+            background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+        }
+        .card3{
+            height: 100px;
+            width: 100px;
+            border-radius: 10px;
+            background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+        }
+        h2{
+            text-align: center;
+            color: white;
+        }
+        .containers {
+            text-align: center;
+        }
+        .parent{
+            justify-content: center;
+        }
+        @media (max-width:600px){
+            .parent{
+            display: block;
+            gap: 40px;
+        }
+        }
+    </style>
+</head>
+<body>
+<div class="containers">
+    <h1>7 UP or 7 or 7 DOWN</h1>
+    <div class="parent">
+        <div class="card1">
+            <h2>7 UP</h2>
+        </div>
+        <div class="card2">
+            <h2>7</h2>
+        </div>
+        <div class="card3">
+            <h2>7 down</h2>
+        </div>
+    </div>
+    <button onclick="rollon()">ROLL</button>
+    <img class="img1" src="" alt="" height="100px" width="100px">
+    <img class="img2" src="" alt="" height="100px" width="100px">
+    <h1></h1>
+</div>
+    <script>
+        L = [1,2,3,4,5,6]
+        document.querySelectorAll("img")[0].setAttribute('src','Dice-Gif.gif')
+        document.querySelectorAll("img")[1].setAttribute('src','Dice-Gif.gif')
+        function rollon(){
+            let bet = prompt("enter your betting money:")
+            let choice1 = prompt("PRESS 1 FOR 7 UP: \nPRESS 2 FOR EXACT 7: \nPRESS 3 FOR 7 DOWN")
+            N = Math.floor(Math.random()*6);
+            V = Math.floor(Math.random()*6);
+            document.getElementsByClassName("img1")[0].setAttribute("src",`D-${L[N]}.PNG`)
+            document.getElementsByClassName("img2")[0].setAttribute("src",`D-${L[V]}.PNG`)
+        if((L[N] + L[V]) == 7 && choice1 ==2){
+            document.querySelectorAll("h1")[1].innerHTML = `${L[N] + L[V]} =>You Won Rs.${3*bet} `
+        }
+        else if((L[N] + L[V]) > 7 && choice1 == 1){
+            document.querySelectorAll("h1")[1].innerHTML = `${L[N] + L[V]} =>You Won Rs.${2*bet}`
+        }
+        else if((L[N] + L[V]) < 7 && choice1 == 3){
+            document.querySelectorAll("h1")[1].innerHTML = `${L[N] + L[V]} =>You Won Rs.${2*bet}`
+        }
+        else{
+            document.querySelectorAll("h1")[1].innerHTML = `${L[N] + L[V]} =>You Lost`
+        }
+    }
+    </script>
+</body>
+</html>

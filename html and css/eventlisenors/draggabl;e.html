@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .main{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .main .from{
+            width: 300px;
+            height: 400px;
+            background-color: aliceblue;
+            overflow: scroll;
+        }
+        .main .to{
+            width: 300px;
+            height: 400px;
+            background-color:antiquewhite;
+            overflow: scroll;
+        }
+        .red{
+            margin: 10px;
+            background-color: red;
+            border-radius: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="from" draggable="true"></div>
+        <div class="to" draggable="true"></div>
+    </div>
+    <div style="margin: 5% 0 0 30%;">
+        <label for="bb" style="color: rgb(165, 153, 153);">Enter the Tasks to be Done:</label>
+        <input type="text" name="bb"  class="inp">
+        <button onclick="function1()">Add</button>
+    </div>
+    
+</body>
+<script>
+    let from=document.querySelector('.from')
+    let to=document.querySelector('.to')
+    from.addEventListener('dragover',function(e){
+        e.preventDefault()
+
+    })
+    from.addEventListener('drop',function(e){
+        from.appendChild(ab)
+        
+    })
+
+    to.addEventListener('dragover',function(e){
+        e.preventDefault()
+
+    })
+    to.addEventListener('drop',function(e){
+        // ab.style.backgroundColor="green"
+        to.appendChild(ab)
+        
+    })
+
+
+
+    
+
+    function function1(){
+        let inp=document.getElementsByTagName('input')[0].value
+        let element=document.createElement('div')
+        element.innerHTML=inp
+        from.appendChild(element)
+        element.setAttribute('draggable','true')
+        element.classList='red'
+        element.addEventListener('dragstart',function(e){
+        ab=e.target
+        })
+    } 
+    let ab=''
+
+</script>
+</html>

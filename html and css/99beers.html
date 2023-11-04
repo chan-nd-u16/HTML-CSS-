@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // while(
+
+        // )
+        
+//         for(let i=99;i>0;i--){
+//             document.write(`<p>${i}bottles of beer on the wall,${i}bottles of beer.<br>
+// Take one down and pass it around, ${i-1} bottles of beer on the wall.</p>`)
+           
+//         }
+        
+//                     document.write(`<p>No more bottles of beer on the wall, no more bottles of beer.
+// Go to the store and buy some more, 99 bottles of beer on the wall</p>`)
+// =================================================================================================================>
+            // a=prompt('Enter a number you want to factorial:')     
+            function fact(a){
+                    let temp=1
+                    for(let i=1;i<=a;i++){
+                        temp=temp*i
+                        
+
+                    }
+                    document.write(`the factorial of ${a}====>${temp}`)
+                  }
+            fact(prompt('Enter the number to be factorial:'))
+            function fibo(b){
+                let f1=1
+                let f2=1
+                let tem=0
+                document.write(`<p>fibonacci <br>${f1}<br>${f2}<br>`)
+                for(let i=1;i<=b;i++){
+                    let f3=f1+f2
+                    document.write(`<br>${f3}<br>`)
+                    f1=f2
+                    f2=f3
+
+                }
+
+
+
+            }
+            fibo(prompt('Enter the range of fibonaaci:'))
+                
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        body{
+            /* background: linear-gradient(rgb(194, 236, 188),rgb(37, 230, 162),rgb(5, 197, 111)); */
+            background: linear-gradient(#E2F6CA,#9BE8D8,#78C1F3);
+        }
+        .hidden{
+            display: none;
+        }
+        .user1color{
+            background-color:darkblue;
+            border-radius: 50%;
+            transition: 2s;
+            /* transition-delay: 3s; */
+        }
+        .user2color{
+            background-color:darkred;
+            border-radius: 50%;
+            transition: 2s;
+            /* transition-delay: 3s; */
+        }
+        .main{
+            display: flex;
+            gap: 10%;
+        }
+        .board{
+            display: grid;
+            grid-template-columns:repeat(10,61.9px) ;
+            grid-template-rows: repeat(10,61.9px) ;
+            /* background-color: black; */
+            /* border: 1px solid black; */
+            width: fit-content;
+            background-image: url("https://img.freepik.com/premium-vector/snake-ladders-grid-color-tiles-game-board-with-cute-snakes-ladder-rise-abstract-vector-illustration_229548-3310.jpg");
+            
+            
+        }
+        /* .box{ */
+            /* border: 1px solid black; */
+            /* height: 50px;
+            width: 50px; */
+            /* text-align: center; */
+            /* margin-top: 2px; */
+            /* display: flex;
+            justify-content: center; */
+        /* } */
+        .numb{
+            margin-left: 10%;
+            
+        }
+        /* .bparent{
+            flex: 6;
+        } */
+        .other{
+            display: block;
+            /* flex: 5; */
+            padding-left: 2%;
+            padding-top: 2%;
+        }
+        .usersel{
+            display: flex;
+            gap: 6%;
+            
+        }
+        .black{
+            background-color:black;
+            border-radius: 60%;
+            transition: 2s;
+
+        }
+        .notations{
+            height: 300px;
+            width: 100%;
+            background-color: lightblue;
+            margin: auto;
+            border: solid;
+            overflow: auto;
+        }
+        .green{
+            background-color: lavender;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid;
+            /* transition: 2s; */
+        }
+        .green2{
+            background-color: lightgray;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid;
+            /* transition: 2s; */
+        }
+        .down{
+           
+            margin-left: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+    <div class="bparent">
+
+    
+    <div class="board"> 
+        <div class="box div100"><div class="numb">100</div></div>
+        <div class="box div99"><div class="numb">99</div> </div>
+        <div class="box div98"><div class="numb">98</div> </div>
+        <div class="box div97"><div class="numb">97</div> </div>
+        <div class="box div96"><div class="numb">96</div> </div>
+        <div class="box div95"><div class="numb">95</div> </div>
+        <div class="box div94"><div class="numb">94</div> </div>
+        <div class="box div93"><div class="numb">93</div> </div>
+        <div class="box div92"><div class="numb">92</div> </div>
+        <div class="box div91"><div class="numb">91</div> </div>
+        <div class="box div81"><div class="numb">81</div> </div>
+        <div class="box div82"><div class="numb">82</div> </div>
+        <div class="box div83"><div class="numb">83</div> </div>
+        <div class="box div84"><div class="numb">84</div> </div>
+        <div class="box div85"><div class="numb">85</div> </div>
+        <div class="box div86"><div class="numb">86</div> </div>
+        <div class="box div87"><div class="numb">87</div> </div>
+        <div class="box div88"><div class="numb">88</div> </div>
+        <div class="box div89"><div class="numb">89</div> </div>
+        <div class="box div90"><div class="numb">90</div> </div>
+        <div class="box div80"><div class="numb">80</div> </div>
+        <div class="box div79"><div class="numb">79</div> </div>
+        <div class="box div78"><div class="numb">78</div> </div>
+        <div class="box div77"><div class="numb">77</div> </div>
+        <div class="box div76"><div class="numb">76</div> </div>
+        <div class="box div75"><div class="numb">75</div> </div>
+        <div class="box div74"><div class="numb">74</div> </div>
+        <div class="box div73"><div class="numb">73</div> </div>
+        <div class="box div72"><div class="numb">72</div> </div>
+        <div class="box div71"><div class="numb">71</div> </div>
+        <div class="box div61"><div class="numb">61</div> </div>
+        <div class="box div62"><div class="numb">62</div> </div>
+        <div class="box div63"><div class="numb">63</div> </div>
+        <div class="box div64"><div class="numb">64</div> </div>
+        <div class="box div65"><div class="numb">65</div> </div>
+        <div class="box div66"><div class="numb">66</div> </div>
+        <div class="box div67"><div class="numb">67</div> </div>
+        <div class="box div68"><div class="numb">68</div> </div>
+        <div class="box div69"><div class="numb">69</div> </div>
+        <div class="box div70"><div class="numb">70</div> </div>
+        <div class="box div60"><div class="numb">60</div> </div>
+        <div class="box div59"><div class="numb">59</div> </div>
+        <div class="box div58"><div class="numb">58</div> </div>
+        <div class="box div57"><div class="numb">57</div> </div>
+        <div class="box div56"><div class="numb">56</div> </div>
+        <div class="box div55"><div class="numb">55</div> </div>
+        <div class="box div54"><div class="numb">54</div> </div>
+        <div class="box div53"><div class="numb">53</div> </div>
+        <div class="box div52"><div class="numb">52</div> </div>
+        <div class="box div51"><div class="numb">51</div> </div>
+        <div class="box div41"><div class="numb">41</div> </div>
+        <div class="box div42"><div class="numb">42</div> </div>
+        <div class="box div43"><div class="numb">43</div> </div>
+        <div class="box div44"><div class="numb">44</div> </div>
+        <div class="box div45"><div class="numb">45</div> </div>
+        <div class="box div46"><div class="numb">46</div> </div>
+        <div class="box div47"><div class="numb">47</div> </div>
+        <div class="box div48"><div class="numb">48</div> </div>
+        <div class="box div49"><div class="numb">49</div> </div>
+        <div class="box div50"><div class="numb">50</div> </div>
+        <div class="box div40"><div class="numb">40</div> </div>
+        <div class="box div39"><div class="numb">39</div> </div>
+        <div class="box div38"><div class="numb">38</div> </div>
+        <div class="box div37"><div class="numb">37</div> </div>
+        <div class="box div36"><div class="numb">36</div> </div>
+        <div class="box div35"><div class="numb">35</div> </div>
+        <div class="box div34"><div class="numb">34</div> </div>
+        <div class="box div33"><div class="numb">33</div> </div>
+        <div class="box div32"><div class="numb">32</div> </div>
+        <div class="box div31"><div class="numb">31</div> </div>
+        <div class="box div21"><div class="numb">21</div> </div>
+        <div class="box div22"><div class="numb">22</div> </div>
+        <div class="box div23"><div class="numb">23</div> </div>
+        <div class="box div24"><div class="numb">24</div> </div>
+        <div class="box div25"><div class="numb">25</div> </div>
+        <div class="box div26"><div class="numb">26</div> </div>
+        <div class="box div27"><div class="numb">27</div> </div>
+        <div class="box div28"><div class="numb">28</div> </div>
+        <div class="box div29"><div class="numb">29</div> </div>
+        <div class="box div30"><div class="numb">30</div> </div>
+        <div class="box div20"><div class="numb">20</div> </div>
+        <div class="box div19"><div class="numb">19</div> </div>
+        <div class="box div18"><div class="numb">18</div> </div>
+        <div class="box div17"><div class="numb">17</div> </div>
+        <div class="box div16"><div class="numb">16</div> </div>
+        <div class="box div15"><div class="numb">15</div> </div>
+        <div class="box div14"><div class="numb">14</div> </div>
+        <div class="box div13"><div class="numb">13</div> </div>
+        <div class="box div12"><div class="numb">12</div> </div>
+        <div class="box div11"><div class="numb">11</div> </div>
+        <div class="box div1"><div class="numb">1</div> </div>
+        <div class="box div2"><div class="numb">2</div> </div>
+        <div class="box div3"><div class="numb">3</div> </div>
+        <div class="box div4"><div class="numb">4</div> </div>
+        <div class="box div5"><div class="numb">5</div> </div>
+        <div class="box div6"><div class="numb">6</div> </div>
+        <div class="box div7"><div class="numb">7</div> </div>
+        <div class="box div8"><div class="numb">8</div> </div>
+        <div class="box div9"><div class="numb">9</div> </div>
+        <div class="box div10"><div class="numb">10</div> </div>
+    </div> 
+</div>
+    <div class="other">
+        
+        <h4 style="text-align: center;">GAME HISTORY</h4>
+        <div class="notations">
+
+
+        </div>
+        
+        <div class="down">
+            <div class="usersel">
+                <!-- <button id="user1" onclick="user1()">user1</button>
+                <button id="user2" onclick="user2()">user2</button> -->
+                <h3 class="res"></h3>
+    
+            </div>
+            <div style="margin-left: 6%;">
+                <div class="dice" >
+                    <img src="https://media.tenor.com/IfbgWLbg_88AAAAC/dice.gif" alt="" class="dice1" style="border:7px solid white;width: 32%;margin-top: 5%;">
+                </div>
+                <div style="display: flex;">
+                    
+                    <button style="margin:7%;" onclick="fun1()" class="d1">Roll</button>
+                    <button onclick="fun2()" style="margin: 7%;" class="d2">Roll</button>
+                    <h2 class="resu"></h2>
+        
+                </div>
+
+            </div>
+            
+
+        </div>
+        
+       
+        
+        
+        
+
+    </div>
+        
+    
+
+</div>
+<button id="action">Download csv</button>
+
+	<script type="text/javascript"
+		></script>
+
+    
+</body>
+<script>
+ let user1DiceValue=0
+ let user2DiceValue=0
+ 
+
+ document.getElementsByTagName('button')[1].style.display="none"
+ document.getElementsByClassName('res')[0].innerHTML="USER1 TURN"
+
+let array=[]
+
+    function fun1(){
+        
+    let dice=new Audio('youknowdice.mp3')
+    dice.play()
+    let myInterval=setInterval(diceRotateGif,100)
+
+                function diceRotateGif(){
+                
+                let d1=[1,2,3,4,5,6]
+                let r1=Math.floor(Math.random()*6)
+                
+                document.querySelector('.dice1').setAttribute('src',`${d1[r1]}.png`)
+               
+        }
+    setTimeout(roll1,1500)
+    function roll1(){
+        clearInterval(myInterval)
+        // let dice=new Audio('youknowdice.mp3')
+            // dice.play()
+        document.getElementsByClassName('res')[0].innerHTML="USER2 TURN"
+        document.getElementsByTagName('button')[0].style.display="none"
+        document.getElementsByTagName('button')[1].style.display="block"
+       
+        let d=[1,2,3,4,5,6]
+        let r=Math.floor(Math.random()*6)
+        document.querySelector('.dice1').setAttribute('src',`${d[r]}.png`)
+
+
+        // document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.remove('black')
+        //     document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.remove('black')
+        // console.log(d[r])
+        // document.getElementsByClassName(`div${d[r]}`)[0].style.backgroundColor="white"
+
+       
+        user1DiceValue+=d[r]
+        let win=new Audio('win1.wav')
+        let coin=new Audio('coin.wav')
+        // console.log(user1DiceValue)
+        if(d[r]==6){
+            document.getElementsByClassName('res')[0].innerHTML="Its six USER1 turn again"
+                
+                document.getElementsByTagName('button')[1].style.display="none"
+                document.getElementsByTagName('button')[0].style.display="block"
+                // document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+                // document.getElementsByClassName(`div${user1DiceValue-d[r]}`)[0].classList.remove('user1color')
+            }
+        else{
+            document.getElementsByTagName('button')[1].style.display="block"
+            document.getElementsByTagName('button')[0].style.display="none"
+
+        }
+        
+        if(user1DiceValue==10){
+            // document.getElementsByClassName(`div29`)[0].classList.add('user1color')
+            // user1DiceValue=29
+            let ten=10-d[r]
+        document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+        user1DiceValue=29
+        
+        document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+        let lad=new Audio('ladder.mp3')
+            lad.play()
+            nota()
+            
+        }
+        else if(user1DiceValue==15){
+            let ten=15-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=36
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let lad=new Audio('ladder.mp3')
+            lad.play()
+            nota()
+
+
+        }
+        else if(user1DiceValue==20){
+            let ten=20-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=39
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let lad=new Audio('ladder.mp3')
+            lad.play()
+            nota()
+
+
+        }
+        else if(user1DiceValue==54){
+            let ten=54-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=74
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let lad=new Audio('ladder.mp3')
+            lad.play()
+            nota()
+
+        }
+        else if(user1DiceValue==71){
+            let ten=71-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=91
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let lad=new Audio('ladder.mp3')
+            lad.play()
+            nota()
+
+        }
+        else if(user1DiceValue==76){
+            let ten=76-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=95
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let lad=new Audio('ladder.mp3')
+            lad.play()
+            nota()
+
+        }
+        else if(user1DiceValue==80){
+            let ten=80-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=99
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let lad=new Audio('ladder.mp3')
+            lad.play()
+            nota()
+
+        }
+        // ======================================ladder ends snake starts================
+        
+        else if(user1DiceValue==14){
+            let ten=14-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=9
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+           
+            
+
+        }
+        else if(user1DiceValue==19){
+            let ten=19-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=4
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+           
+            
+
+        }
+        else if(user1DiceValue==34){
+            let ten=34-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=27
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+           
+            
+
+        }
+        else if(user1DiceValue==37){
+            let ten=37-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=17
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+           
+            
+
+        }
+        else if(user1DiceValue==53){
+            let ten=53-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=32
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+            }
+
+           
+            
+
+        }
+        else if(user1DiceValue==57){
+            let ten=57-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=43
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+           
+            
+
+        }
+        else if(user1DiceValue==62){
+            let ten=62-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=42
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+           
+            
+
+        }
+        else if(user1DiceValue==66){
+            let ten=66-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=46
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+           
+            
+
+        }
+        else if(user1DiceValue==72){
+            let ten=72-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=68
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+           
+            
+
+        }
+        else if(user1DiceValue==83){
+            let ten=83-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=64
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+            }
+
+           
+            
+
+        }
+        else if(user1DiceValue==94){
+            let ten=94-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=88
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+            }
+
+           
+            
+
+        }
+        else if(user1DiceValue==97){
+            let ten=97-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            user1DiceValue=85
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+           
+            
+
+        }
+        else if(user1DiceValue>100){
+            let ten=user1DiceValue-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.add('user1color')
+            user1DiceValue=ten
+            nota()
+
+
+        }
+        else if(user1DiceValue==100){
+            let ten=100-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user1color')
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            document.getElementsByTagName('button')[0].style.display="none"
+            document.getElementsByTagName('button')[1].style.display="none"
+            document.getElementsByClassName('resu')[0].innerHTML="User1 Won"
+            win.play()
+            
+
+            nota()
+
+
+        }
+        // =========================================other than snake and ladder====================
+        else{
+            nota()
+            document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('user1color')
+            document.getElementsByClassName(`div${user1DiceValue-d[r]}`)[0].classList.remove('user1color')
+            let dice=new Audio('youknowdice.mp3')
+            // dice.play()
+            coin.play()
+           
+            
+
+        }
+        // if(user1DiceValue==user2DiceValue){
+        //     document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.add('black')
+        //     document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('black')
+
+
+        // }
+        function nota(){
+        let not=document.querySelector('.notations')
+        let newele=document.createElement('div')
+        newele.innerHTML=`User1: Dice-${d[r]},Moved to ${user1DiceValue}`
+        newele.classList="green"
+        not.appendChild(newele)
+        if(user1DiceValue==100){
+            let gif=document.createElement('img')
+            gif.style.height="200px"
+            gif.style.width="300px"
+            gif.style.margin="auto"
+            gif.setAttribute('src','https://cdn.dribbble.com/users/1277402/screenshots/5986513/media/b5b1e85ebbeebaad5bdb2ebf274f0497.gif')
+            not.appendChild(gif)
+
+
+        }
+        array.push({User:'user1',Dicevalue:d[r],To:user1DiceValue})
+        // console.log(array)
+       
+    //    if(user1DiceValue==10||user1DiceValue==15||user1DiceValue==20||user1DiceValue==54||user1DiceValue==71||user1DiceValue==76||user1DiceValue==80){
+    //             document.querySelector('#icon').classList.value="fa-solid fa-water-ladder"
+    //    }
+    //    else if(user1DiceValue==14||user1DiceValue==19||user1DiceValue==34||user1DiceValue==37||user1DiceValue==53||user1DiceValue==57||user1DiceValue==62||user1DiceValue==66||user1DiceValue==72||user1DiceValue==83||user1DiceValue==94||user1DiceValue==97){
+    //             // newele.innerHTML=`<i class="fa-solid fa-staff-snake"></i>User1: Dice-${d[r]},Moved to ${user1DiceValue}`
+    //             // newele.classList="green"
+    //             // not.appendChild(newele) 
+    //         document.querySelector('#icon').classList.value="fa-solid fa-staff-snake"
+    //    }
+    
+
+       
+               
+
+    
+       
+
+        }
+        
+        
+
+        
+        
+        
+
+    }
+}
+function fun2(){
+    let dice=new Audio('youknowdice.mp3')
+    dice.play()
+    let myInterval=setInterval(diceRotateGif,100)
+
+                function diceRotateGif(){
+                
+                let d1=[1,2,3,4,5,6]
+                let r1=Math.floor(Math.random()*6)
+                
+                document.querySelector('.dice1').setAttribute('src',`${d1[r1]}.png`)
+               
+        }
+    setTimeout(roll2,1500)
+
+    function roll2(){
+        clearInterval(myInterval)
+        // let dice=new Audio('youknowdice.mp3')
+        //     dice.play()
+        document.getElementsByClassName('res')[0].innerHTML="USER1 TURN"
+        document.getElementsByTagName('button')[1].style.display="none"
+        document.getElementsByTagName('button')[0].style.display="block"
+        let d=[1,2,3,4,5,6]
+         let r=Math.floor(Math.random()*6)
+        document.querySelector('.dice1').setAttribute('src',`${d[r]}.png`)
+        // console.log(d[r])
+        // document.getElementsByClassName(`div${d[r]}`)[0].style.backgroundColor="white"
+        // document.getElementsByClassName(`div${user1DiceValue}`)[0].classList.remove('black')
+        //     document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.remove('black')
+
+        let win=new Audio('win1.wav')
+        let coin=new Audio('coin.wav')
+        user2DiceValue+=d[r]
+        if(d[r]==6){
+            document.getElementsByClassName('res')[0].innerHTML="Its six USER2 turn again"
+                
+                document.getElementsByTagName('button')[1].style.display="block"
+                document.getElementsByTagName('button')[0].style.display="none"
+                // document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+                // document.getElementsByClassName(`div${user2DiceValue-d[r]}`)[0].classList.remove('user2color')
+        }
+        else{
+                document.getElementsByTagName('button')[1].style.display="none"
+                document.getElementsByTagName('button')[0].style.display="block"
+
+        }
+
+        if(user2DiceValue==10){
+            
+        let ten=10-d[r]
+        document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+        user2DiceValue=29
+        document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+        let lad=new Audio('ladder.mp3')
+        lad.play()
+        nota()
+            
+        }
+        else if(user2DiceValue==15){
+            let ten=15-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=36
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let lad=new Audio('ladder.mp3')
+            lad.play()
+            nota()
+
+
+        }
+        else if(user2DiceValue==20){
+            let ten=20-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=39
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let lad=new Audio('ladder.mp3')
+            lad.play()
+            nota()
+
+
+        }
+        else if(user2DiceValue==54){
+            let ten=54-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=74
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let lad=new Audio('ladder.mp3')
+            lad.play()
+            nota()
+
+        }
+        else if(user2DiceValue==71){
+            let ten=71-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=91
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let lad=new Audio('ladder.mp3')
+            lad.play()
+            nota()
+
+        }
+        else if(user2DiceValue==76){
+            let ten=76-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=95
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let lad=new Audio('ladder.mp3')
+            lad.play()
+            nota()
+
+        }
+        else if(user2DiceValue==80){
+            let ten=80-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=99
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let lad=new Audio('ladder.mp3')
+            lad.play()
+            nota()
+
+        }
+        // ==========================ladder end snake start=================
+        else if(user2DiceValue==14){
+            let ten=14-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=9
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+            }
+           
+            
+
+        }
+        else if(user2DiceValue==19){
+            let ten=19-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=4
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+            }
+
+           
+            
+
+        }
+        else if(user2DiceValue==34){
+            let ten=34-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=27
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+            }
+
+           
+            
+
+        }
+        else if(user2DiceValue==37){
+            let ten=37-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=17
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+           
+            
+
+        }
+        else if(user2DiceValue==53){
+            let ten=53-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=32
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+           
+            
+
+        }
+        else if(user2DiceValue==57){
+            let ten=57-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=43
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+           
+            
+
+        }
+        else if(user2DiceValue==62){
+            let ten=62-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=42
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+        }
+        else if(user2DiceValue==66){
+            let ten=66-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=46
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+           
+            
+
+        }
+        else if(user2DiceValue==72){
+            let ten=72-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=68
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+           
+            
+
+        }
+        else if(user2DiceValue==83){
+            let ten=83-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=64
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+           
+            
+
+        }
+        else if(user2DiceValue==94){
+            let ten=94-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=88
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+           
+            
+
+        }
+        else if(user2DiceValue==97){
+            let ten=97-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            user2DiceValue=85
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            let sna=new Audio('snake.mp3')
+            sna.play()
+            nota()
+            setTimeout(stopper,3000)
+            function stopper(){
+                sna.pause() 
+             }
+
+           
+            
+
+        }
+        else if(user2DiceValue>100){
+            let ten=user2DiceValue-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.add('user2color')
+            user2DiceValue=ten
+            nota()
+
+
+        }
+        else if(user2DiceValue==100){
+            let ten=100-d[r]
+            document.getElementsByClassName(`div${ten}`)[0].classList.remove('user2color')
+            document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+            document.getElementsByClassName('resu')[0].innerHTML="user2 Won"
+            win.play()
+            nota()
+            
+
+
+        }
+        
+        // =================================other than ladder and snake============================
+        else{
+            nota()
+           document.getElementsByClassName(`div${user2DiceValue}`)[0].classList.add('user2color')
+           document.getElementsByClassName(`div${user2DiceValue-d[r]}`)[0].classList.remove('user2color')
+           coin.play()
+
+        }
+        
+        function nota(){
+        let not=document.querySelector('.notations')
+        let newele=document.createElement('div')
+        newele.innerHTML=`User2: Dice-${d[r]},Moved to ${user2DiceValue}`
+        newele.classList="green2"
+        not.appendChild(newele)
+        if(user2DiceValue==100){
+            let gif=document.createElement('img')
+            gif.style.height="200px"
+            gif.style.width="300px"
+            gif.style.margin="auto"
+            gif.setAttribute('src','https://cdn.dribbble.com/users/1277402/screenshots/5986513/media/b5b1e85ebbeebaad5bdb2ebf274f0497.gif')
+            not.appendChild(gif)
+
+
+        }
+        array.push({User:'user2',Dicevalue:d[r],To:user2DiceValue})
+        // console.log(array)
+
+        }
+
+        
+        
+
+    }
+}
+
+
+
+
+// Getting element by id and adding
+// eventlistener to listen everytime
+// button get pressed
+
+
+const download = function (data) {
+   
+
+   // Creating a Blob for having a csv file format
+   // and passing the data with type
+   const blob = new Blob([data], { type: 'text/csv' });
+
+   // Creating an object for downloading url
+   const url = window.URL.createObjectURL(blob)
+
+   // Creating an anchor(a) tag of HTML
+   const a = document.createElement('a')
+
+   // Passing the blob downloading url
+   a.setAttribute('href', url)
+
+   // Setting the anchor tag attribute for downloading
+   // and passing the download file name
+   a.setAttribute('download', 'download.csv');
+
+   // Performing a download with click
+   a.click()
+  
+}
+
+const csvmaker = function (data) {
+  
+
+   // Empty array for storing the values
+   csvRows = [];
+
+   // Headers is basically a keys of an
+   // object which is id, name, and
+   // profession
+   const headers = Object.keys(data[0]);
+
+   // As for making csv format, headers
+   // must be separated by comma and
+   // pushing it into array
+   csvRows.push(headers.join(','));
+
+   // Pushing Object values into array
+   // with comma separation
+   for(i of data){
+   const values = Object.values(i).join(',');
+   csvRows.push(values)
+   }
+
+   // Returning the array joining with new line
+   return csvRows.join('\n')
+  
+}
+
+const get = async function () {
+
+   // let object={
+   //   const  data ={
+   // 	id: 1,
+   // 	name: "Geeks",
+   // 	profession: "developer"
+   // }
+   
+//    const data = [
+//        { id: 1,
+//         name: "Geeks",
+//         profession: "developer"},
+//         { id: 2,
+//         name: "Geeks",
+//         profession: "developer"}
+    
+//         ]
+
+   const csvdata = csvmaker(array);
+   download(csvdata);
+}
+
+// Getting element by id and adding
+// eventlistener to listen everytime
+// button get pressed
+const btn = document.getElementById('action');
+btn.addEventListener('click', get);
+
+
+
+
+    
+    
+
+</script>
+</html>

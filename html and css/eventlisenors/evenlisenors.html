@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            height: 200px;
+            width: 200px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="div" onmouseover="mouse()" >
+
+    </div>
+    <button onclick="button()" >click</button>
+    
+</body>
+<script>
+    function button(){
+        i=20
+        let d=document.querySelector('.div')
+        
+        d.style.height=`${(250+i)}px`
+        d.style.width=`${(250+i)}px`
+        
+       
+        
+       
+    }
+    function mouse(){
+        i=20
+        let d=document.querySelector('.div')
+        
+        d.style.height=`${200}px`
+        d.style.width=`${200}px`
+
+    }
+    // setInterval(button,1000)
+
+
+
+</script>
+</html>

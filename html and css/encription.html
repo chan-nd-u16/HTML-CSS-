@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     let mes=prompt("enter the message:")
+    //     let key=prompt("enter the key")
+    //     let sa=key.split(' ')
+    //     blank1=' '
+    //     bank2=' '
+    //     function encrpt(mes,key,key1,key2){
+       
+    //      if(arguments.length==2){
+    //          for(i of mes.split('')){
+    //              blank1+=String.fromCharCode(i.charCodeAt(0)+key)
+            
+    //     }
+    //     return blank1
+
+
+    //     }
+    //     else if(arguments.length==3){
+    //     for(i of mes.split('')){
+            
+            
+    //         blank1+=String.fromCharCode(i.charCodeAt(0)+(key+key1))
+            
+    //     }
+    //     return blank1
+    // }
+        
+    // else if(arguments.length==4){
+    //     for(i of mes.split('')){
+    //         blank1+=String.fromCharCode(i.charCodeAt(0)*(key+key1+key2))
+            
+    //     }
+    //     return blank1
+        
+    // }
+    // a=encrpt(mes,sa[0],sa[1],sa[2])
+    // document.write(a)
+
+    
+        
+        
+        
+
+
+    // }
+    let msg=prompt('enter the msg')
+    let key=prompt('enter the keys')
+    let sa =key.split(' ')
+bl=''
+ba=''
+function encryt(msg,key,key1,key2){
+    if(arguments.length===2){
+    msg.split('').forEach(element => {
+        bl+= String.fromCharCode(element.charCodeAt(0)*key)
+    });
+}
+    else if(arguments.length==3){
+        msg.split('').forEach(element => {
+            bl+= String.fromCharCode(element.charCodeAt(0)*(key+key1))
+        });
+    }
+    else if(arguments.length==4){
+        msg.split('').forEach(element => {
+            bl+= String.fromCharCode(element.charCodeAt(0)*(key+key1+key2))
+        });
+    }
+    return (bl)
+}
+
+function decryt(a,key,key1,key2){
+    if(arguments.length===2){ 
+        a.split('').forEach(element => {
+        ba+=String.fromCharCode(element.charCodeAt(0)/key)
+    });
+}
+    else if(arguments.length==3){
+        a.split('').forEach(element => {
+            ba+=String.fromCharCode(element.charCodeAt(0)/(key1+key))
+        });
+    }
+    else if(arguments.length==4){
+        a.split('').forEach(element => {
+            ba+=String.fromCharCode(element.charCodeAt(0)/(key+key1+key2))
+        });
+    }
+    return (ba)
+}
+for(i in sa){
+    let a=encryt(msg,sa[i])
+    
+
+}
+document.write('encrypted '+a+'\n'+'<br>')
+
+
+for(i in s){
+    let s=decryt(a,sa[i])
+    document.write('decrypted '+s)
+
+}
+
+
+    </script>
+    
+</body>
+</html>

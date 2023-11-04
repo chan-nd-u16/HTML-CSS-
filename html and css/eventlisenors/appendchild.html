@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: aquamarine;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box" onclick="fun()">
+
+    </div>
+    <div class="actionn"></div>
+    <!-- <button class="btn"></button> -->
+
+    <script>
+        count=0
+        function fun(){
+            action=document.querySelector('.actionn')
+            
+            btn=document.createElement("button")
+            action.appendChild(btn)
+            btn.style.backgroundColor='red'
+            btn.style.height="50px"
+            btn.style.width="100px"
+            count++
+            btn.innerHTML=count
+            
+
+
+
+
+
+
+        }
+    </script>
+    
+</body>
+</html>

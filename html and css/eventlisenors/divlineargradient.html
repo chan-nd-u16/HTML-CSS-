@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box:hover{
+            
+            background: linear-gradient(red,blue,yellow);
+        }
+        .box{
+            width:400px;
+            height: 400px;
+            background:transparent;
+        }
+        /* body{
+            background-image: url(https://th.bing.com/th/id/OIP.04jMjzdNhFmxeJbEahdt9QHaEK?pid=ImgDet&rs=1);
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+<script>
+    document.getElementsByClassName('box')[0].addEventListener('mouseover',fn1)
+    function fn1(){
+        // let body=document.firstElementChild.lastElementChild
+        let arr=['ran1.jpg','ran2.jpg','ran3.jpg']
+        // let b=document.getElementsByTagName('body')[0]
+        let ri=Math.floor(Math.random()*arr.length)
+        // arr[ri]
+        document.body.style.backgroundImage=`url(${arr[ri]})`
+        document.body.style.backgroundSize='cover'
+        // b.setAttribute('background-image',arr[ri])
+        // let im = document.createElement("img");
+        // img.src = arr[ri]
+        // document.body.appendChild (img);
+        let bg=['linear-gradient(red,blue,yellow)','linear-gradient(violet,grey,brown)','linear-gradient(aqua,pink,orange)']
+
+        let div=document.getElementsByClassName('box')[0]
+        div.style.background=bg[ri]
+
+
+    }
+    
+    
+</script>
+</html>

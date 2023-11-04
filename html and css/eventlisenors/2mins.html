@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button onclick="func()">click here</button>
+</body>
+<script>
+    function func(){
+    let val=document.getElementsByTagName('input')[0].value
+    let vow='aeiou'
+    let withvowel=' '
+    let withoutvowel=' '
+   
+    for(i in val){
+       
+        if((val[i].includes('a'))||(val[i].includes('e'))||(val[i].includes('i'))||(val[i].includes('o'))||(val[i].includes('u'))){
+            withvowel+=val[i]
+
+        }
+        else{
+            withoutvowel+=val[i]
+        }
+        
+    }
+    document.write(withoutvowel)
+
+    }
+    
+</script>
+</html>

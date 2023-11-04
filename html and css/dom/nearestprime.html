@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        let a=prompt("enter a number:")
+        function prime(a){
+            let count=0
+            for(i=1;i<=a;i++){
+                if(a%i==0){
+                    count=count+1
+                }
+                
+            }
+        
+            if(count==2){
+                // document.write(`${a} is prime number`)
+                return true
+            }
+            else{
+                // document.write(`${a} is not a prime number`)
+                return false
+
+            }
+
+        }
+        prime(a)
+        if(prime(a)){
+             document.write(`${a} is prime number`)
+            
+
+        }
+        else{
+            while(true){
+            x=a-1
+            y=a+1
+            if(prime(x)){
+                document.write(`${x} is the nearest prime number`)
+                break
+
+            }
+            else if(prime(y)){
+                document.write(`${x} is the nearest prime number`)
+                break
+
+            }
+        }
+
+        }
+ 
+    </script>
+    
+</body>
+</html>

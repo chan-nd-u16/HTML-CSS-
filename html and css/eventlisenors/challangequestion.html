@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let name=[]
+    let amount=[]
+    let pay=[]
+    let rec=[]
+    let equal=[]
+    let total=0
+    let n=prompt("Enter the number of person:")
+    for(let i=0;i<n;i++){
+        name[i]=prompt(`Enter ${i+1} person Name:`)
+        amount[i]=prompt(`Enter ${i+1} person amount:`)
+        total+=Number(amount[i])
+    }
+   
+
+    let avg=total/n
+    for(let  i=0;i<n;i++){
+        if(amount[i]<avg){
+            pay[i]=avg-amount[i]
+        }
+        else if(amount[i]>avg){
+            rec[i]=amount[i]-avg
+        }
+        else if(amount[i]==avg){
+            rec[i]=0
+            pay[i]=0
+           
+        }
+    }
+    
+    
+    
+</script>
+</html>

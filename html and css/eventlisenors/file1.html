@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="fille" onchange="fn1()">
+    <img src="" alt="" class="pro" style="border-radius: 50%;height: 200px;width: 200px;">
+    
+</body>
+<script>
+    function fn1(){
+        let profile=document.getElementById('fille').files[0]
+        let imgg=URL.createObjectURL(profile)
+        document.getElementsByClassName('pro')[0].setAttribute('src',imgg)
+
+    }
+    
+</script>
+</html>

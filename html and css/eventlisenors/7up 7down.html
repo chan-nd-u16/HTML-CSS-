@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twoplayer</title>
+    <style>
+        
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+        .dice1{
+            width: 200px;
+            height:200px;
+            /* margin-left:100px ; */
+            
+        }
+        .dice2{
+            width: 200px;
+            height:200px;
+            /* margin-left:150px ; */
+            
+        }
+        .parent{
+            display: inline-flex;
+            gap: 100px;
+            padding-top: 5%;
+            padding-left: 25%;
+        
+        }
+        .cl{
+            padding-left: 45%;
+        }
+
+        .block{
+            display: flex;
+            gap:20px;
+            padding-left: 20%;
+        }
+        .sevenup{
+            height: 200px;
+            width: 200px;
+            background-color: #61677A;
+            text-align: center;
+            
+
+        }
+        .seven{
+            height: 200px;
+            width: 200px;
+            background-color: #61677A;
+            text-align: center;
+            
+        }
+        .sevendown{
+            height: 200px;
+            width: 200px;
+            background-color: #61677A;
+            text-align: center;
+            
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">choose any of the option Given below</h1>
+    <div class="block">
+            <div class="sevenup" onclick="sevenup()">
+                <h1 style="margin-top: 40%;">7up</h1>
+
+            </div>
+            <div class="seven" onclick="seven()">
+                <h1 style="margin-top: 40%;">7</h1>
+            </div>
+            <div class="sevendown" onclick="sevendown()">
+                <h1 style="margin-top: 40%;">7down</h1>
+        
+            </div>
+
+    </div>
+
+    <div class="parent">
+
+        <div class="div1" style="display: block;">
+            <img class="dice1" src="https://media.tenor.com/IfbgWLbg_88AAAAC/dice.gif" alt="">
+            <!-- <h1 class="pl1">dice 1</h1> -->
+
+        </div>
+        <div class="div2" style="display: block;">
+            <img class="dice2" src="https://media.tenor.com/IfbgWLbg_88AAAAC/dice.gif" alt="">
+            <!-- <h1 class="pl2">dice 2</h1> -->
+            <!-- <button class="player2" onclick="function1()">Roll</button> -->
+        </div>  
+    </div>
+    <div class="cl">
+        
+        <button class="player1" onclick="function1()">Roll</button>
+        <h1 class="result"></h1>
+    </div>
+    <!-- <button class="open-button" onclick="openForm()">Open Form</button> -->
+
+<!-- The form -->
+<!-- <div class="form-popup" id="myForm">
+  <form action="" class="form-container">
+    <h1>ENTER DETAILS</h1>
+
+    <label for="name"><b>NAME</b></label>
+    <input type="text" placeholder="" name="name" required>
+
+    <label for="amount"><b>AMOUNT</b></label>
+    <input type="text" placeholder="" name="amount" required>
+
+    <button type="submit" class="btn">SAVE</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div> -->
+    
+    
+   
+</body>
+<script>
+    
+
+    // ch=prompt("choose 1.7up 2.7 3.7down :")
+   
+    // function function1(){
+    //     d1=[1,2,3,4,5,6]
+    //     r1=Math.floor(Math.random()*6)
+    //     document.querySelector('.dice1').setAttribute('src',`${d1[r1]}.png`)
+    //     // document.querySelector('.pl1').innerHTML=`${p1}`
+
+
+    //     d2=[1,2,3,4,5,6]
+    //     r2=Math.floor(Math.random()*6)
+    //     document.querySelector('.dice2').setAttribute('src',`${d2[r2]}.png`)
+    //     // document.querySelector('.pl2').innerHTML=`${d2[r2]}`
+
+    //     // document.querySelector('.pl1').innerHTML=`${d1[r1]}`
+    //     let total=d1[r1]+d2[r2] 
+
+    //     // if(ch.toLowerCase()=="7up"){
+            
+    //     // }
+    //     //  if(ch.toLowerCase()=="7"){
+            
+    //     // }
+    //     // else if(ch.toLowerCase()=="7down"){
+            
+    //     // }
+
+    // }
+    function sevenup(){
+        p1=prompt("Enter your name:")
+        d1=[1,2,3,4,5,6]
+        r1=Math.floor(Math.random()*6)
+        document.querySelector('.dice1').setAttribute('src',`${d1[r1]}.png`)
+       
+
+
+        d2=[1,2,3,4,5,6]
+        r2=Math.floor(Math.random()*6)
+        document.querySelector('.dice2').setAttribute('src',`${d2[r2]}.png`)
+        
+        let total=d1[r1]+d2[r2]
+
+        if(total>7){
+                document.querySelector('.result').innerHTML=`${total} is  7up you win`
+            }
+        else{
+                document.querySelector('.result').innerHTML=`you lose ,${total} is  not  7up`
+
+            }
+    }
+    function roll(){
+        
+    }
+    function seven(){
+        p1=prompt("Enter your name:")
+        d1=[1,2,3,4,5,6]
+        r1=Math.floor(Math.random()*6)
+        document.querySelector('.dice1').setAttribute('src',`${d1[r1]}.png`)
+        // document.querySelector('.pl1').innerHTML=`${p1}`
+
+
+        d2=[1,2,3,4,5,6]
+        r2=Math.floor(Math.random()*6)
+        document.querySelector('.dice2').setAttribute('src',`${d2[r2]}.png`)
+        
+        let total=d1[r1]+d2[r2]
+        if(total==7){
+                document.querySelector('.result').innerHTML=`${total} is  7 you win`
+            }
+        else{
+                document.querySelector('.result').innerHTML=`you lose,${total} is not 7`
+
+            }
+
+    }
+    function sevendown(){
+        p1=prompt("Enter your name:")
+        d1=[1,2,3,4,5,6]
+        r1=Math.floor(Math.random()*6)
+        document.querySelector('.dice1').setAttribute('src',`${d1[r1]}.png`)
+        d2=[1,2,3,4,5,6]
+        r2=Math.floor(Math.random()*6)
+        document.querySelector('.dice2').setAttribute('src',`${d2[r2]}.png`)
+
+        let total=d1[r1]+d2[r2]
+        if(total<7){
+                document.querySelector('.result').innerHTML=`${total} is  7down you win`
+            }
+        else{
+                document.querySelector('.result').innerHTML=`you lose,${total} is not 7down`
+
+            }
+        
+    }
+    function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+
+   
+    
+
+   </script>
+</html>

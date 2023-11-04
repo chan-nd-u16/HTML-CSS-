@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+
+        }
+        .check{
+            display:none;
+        }
+        .slide{
+            display: block;
+
+        }
+        ul li :hover{
+            
+            background-color:aliceblue;
+            transition: 0.5s;
+            font-size:medium;
+            
+
+        }
+        @media(max-width:471px){
+            .slide{
+                position: relative;
+                left: -1000px;
+                
+            }
+            .check{
+                display: block;
+                position: relative;
+                float: right;
+                
+            }
+            ul{
+                position: relative;
+                left: -40px;
+            }
+               
+        }
+        .check:checked ~ .slide{
+                display: flex;
+                position: relative;
+                top: 50px;
+                left: -130px;
+                transition: 3s;
+                background-color: black;
+                ul{
+                    position: fixed;
+                }
+                
+
+                
+                
+
+            }
+            
+
+        li{
+            float: right;
+            margin: 5px;
+            padding:-10px;
+
+        }
+        .navbar .slide{
+
+            
+            
+            text-transform: uppercase;
+            padding-right:10px;
+            padding:10px;
+            
+            
+            
+        }
+        .navbar{
+           
+            background-color:aqua;
+            height: 40px;
+            width: 100%;
+            
+        }
+        
+
+       
+
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1 style="font-size: 30px;float: left;">HYSTERISIS</h1>
+        <input type="checkbox"class="check" >
+     
+
+         <div class="slide">
+            <ul>
+                
+                <li style="list-style: none;"  ><a href="#" >service</a>   </li>
+                <li style="list-style: none;"  ><a href="#" >Contact</a>    </li>
+                <li  style="list-style: none;" > <a href="#" >  About</a> </li>
+                <li  style="list-style: none;" > <a href="#" >   Home</a></li>
+            </ul>
+            
+            
+            
+            
+        </div> 
+        
+          
+          
+        
+
+    </div>
+      
+    
+</body>
+</html>

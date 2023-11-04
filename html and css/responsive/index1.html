@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESPONSIVE</title>
+    <style>
+       .mobile, .Tablet{
+            display: none;
+            
+
+        }
+        body{
+            background-color: orange;
+        }
+        @media(max-width:850px){
+            body{
+                background-color: blue;
+            }
+
+            .Tablet{
+                display: block;
+            }
+            .laptop,.mobile{
+                display: none;
+            }
+        }
+        @media(max-width:415px){
+            body{
+                background-color: red;
+            }
+
+            .mobile{
+                display: block;
+            }
+            .laptop,.Tablet{
+                display:none;
+            }
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="responsive">
+        <div class="laptop" style="background-color:orange;">LAPTOP</div>
+        <div class="Tablet" style="background-color: blue;">TABLET</div>
+        <div class="mobile" style="background-color:red">MOBILE</div>
+    </div>
+    
+</body>
+</html>

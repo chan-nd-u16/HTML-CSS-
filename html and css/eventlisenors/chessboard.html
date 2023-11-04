@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            display: grid;
+            grid-template-columns: repeat(8,60px);
+            grid-template-rows: repeat(8,60px);
+            border: solid;
+            width: fit-content;
+        }
+        .chess{
+            border:1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+                <div class="chess"></div>
+</div>
+<img src="" alt="" style="height: 200px;width: 200px;border-radius: 20%;">
+</body>
+<script>
+    let pawnBlackElementsArray=document.querySelectorAll('.pawnBlack')
+let rows=['A','B','C','D','E','F','G','H']
+    for(pawn of pawnBlackElementsArray){
+        pawn.addEventListener('dragstart',function(e){
+            let currentElement=e.target
+            let position=currentElement.parentElement.classList[0]
+            let temp=rows.indexOf(position[0])
+            position=rows[temp+1]+position[1]
+            let to=document.querySelector(`.${position}`)
+            console.log(to)
+
+            to.addEventListener('dragover',function(e){
+                e.preventDefault()
+            })
+            
+            to.addEventListener('drop',function(e){
+                to.appendChild(currentElement)
+                currentElement=null
+            })
+        })
+    }
+    let pawnWhiteElementsArray=document.querySelectorAll('.pawnWhite')
+    for(pawn of pawnWhiteElementsArray){
+        pawn.addEventListener('dragstart',function(e){
+            let currentElement=e.target
+            let position=currentElement.parentElement.classList[0]
+            let temp=rows.indexOf(position[0])
+            position=rows[temp-1]+position[1]
+            let to=document.querySelector(`.${position}`)
+            console.log(to)
+
+            to.addEventListener('dragover',function(e){
+                e.preventDefault()
+            })
+            
+            to.addEventListener('drop',function(e){
+                to.appendChild(currentElement)
+                currentElement=null
+            })
+        })
+    }
+</script>
+</html>

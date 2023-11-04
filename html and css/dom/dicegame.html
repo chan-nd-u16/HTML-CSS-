@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: linear-gradient(blanchedalmond,lightblue,lightgray);
+            
+        }
+        .dice{
+            height: 200px;
+            width: 200px;
+            
+           
+        }
+    </style>
+</head>
+<body>
+    
+    <img class="dice" src="https://th.bing.com/th/id/R.13a9dedeff12d70781d9d4c9a6de5fdd?rik=BYk%2bMTl97YS95Q&riu=http%3a%2f%2fclipart-library.com%2fimages_k%2fdice-transparent-png%2fdice-transparent-png-12.png&ehk=Wuq70mVm6wbdKAfj26tfL%2f0opS9BJqQcnlIgc%2bautsI%3d&risl=&pid=ImgRaw&r=0" alt="">
+    <h1 class="hh"></h1>
+    <button onclick="dicefunction()">Roll the dice</button>
+    <script>
+        let number =prompt("Guess The Number 1 to 6:")
+        alert('roll the dice')
+
+       function dicefunction(){
+
+        let n=[1,2,3,4,5,6]
+        let r=Math.floor(Math.random()*6)
+        
+        document.querySelector('.dice').setAttribute('src',`${n[r]}.png`)
+        if(number==1){
+            if(n[r]==1){
+                document.querySelector('.hh').innerHTML="YOU WIN"
+
+            }
+            else{
+                document.querySelector('.hh').innerHTML="YOU LOST"
+            }
+           
+        }
+        else if(number==2){
+            if(n[r]==2){
+                document.querySelector('.hh').innerHTML="YOU WIN"
+
+            }
+            else{
+                document.querySelector('.hh').innerHTML="YOU LOST"
+
+            }
+        }
+        else if(number==3){
+            if(n[r]==3){
+                document.querySelector('.hh').innerHTML="YOU WIN"
+
+            }
+            else{
+                document.querySelector('.hh').innerHTML="YOU LOST"
+
+            }
+        }
+        else if(number==4){
+            if(n[r]==4){
+                document.querySelector('.hh').innerHTML="YOU WIN"
+
+            }
+            else{
+                document.querySelector('.hh').innerHTML="YOU LOST"
+
+            }
+        }
+        else if(number==5){
+            if(n[r]==5){
+                document.querySelector('.hh').innerHTML="YOU WIN"
+
+            }
+            else{
+                document.querySelector('.hh').innerHTML="YOU LOST"
+
+            }
+        }
+        else if(number==6){
+            if(n[r]==6){
+                document.querySelector('.hh').innerHTML="YOU WIN"
+
+            }
+            else{
+                document.querySelector('.hh').innerHTML="YOU LOST"
+
+            }
+        }
+        
+        
+
+
+       }
+
+        
+      
+        
+        
+        
+        
+
+
+
+    </script>
+
+    
+</body>
+</html>

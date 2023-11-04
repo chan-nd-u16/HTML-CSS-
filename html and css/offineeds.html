@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+ <style>
+    .logo{
+        height: 50px;
+        width: 100px;
+        position: relative;
+        top: 15px;
+    }
+    .container{
+        background-color: yellow;
+    }
+    .navbar{
+        list-style: none;
+        display: inline flex;
+        left: 200px;
+       
+    }
+    .m{
+        margin: 20px; 
+       
+
+    }
+    .parent{
+     display: flex;
+     background-color: yellow;
+     position: sticky;
+     top: 0px;
+    
+
+    }
+    
+    .menu1:hover>.dropdown-menu {
+         display: block;
+
+}
+.menu1{
+   background-color: yellow;
+}
+.bb{
+    background-color: yellow;
+    border: none;
+    
+}
+    
+ </style> 
+</head>
+  <body>
+    <div class="parent">
+    <div class="topheader">
+        <div class="container">
+           <a href=""><img src="https://offineeds.sirv.com/WP_www.offineeds.com/2021/03/image-removebg-preview-1-e1622179720466.png" alt="" class="logo"></a> 
+
+        </div>
+        
+    </div>
+    <div class="yel">
+    <nav>
+        <div class="con">
+            <div class="navbar">
+                <div class="m menu1">
+                    <button type="button" class="bb btn btn-warning dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false">
+                    Services </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul></div>
+                <div class="m menu2">Knowlege based</div>
+                <div class="m menu3">Resources</div>
+                <div class="m menu4">Locations</div>
+                <div class="m menu5">Testimonals</div>
+                <div class="m menu6">About</div>
+                <div class="m menu7">Contact us</div>
+            </div>
+        </div>
+    </nav>
+</div>
+    </div>
+    <div class="front">
+        <div>
+            <!-- <h1>How Are You Delighting Your Employees Today?</h1> -->
+        </div>
+    </div>
+      
+      
+    
+  </body>
+</html>

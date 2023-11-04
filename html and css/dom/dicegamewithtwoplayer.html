@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twoplayer</title>
+    <style>
+        body{
+            background: linear-gradient(lightgray, antiquewhite,aquamarine);
+            
+        }
+        .dice1{
+            width: 200px;
+            height:200px;
+            /* margin-left:100px ; */
+            
+        }
+        .dice2{
+            width: 200px;
+            height:200px;
+            /* margin-left:150px ; */
+            
+        }
+        .parent{
+            display: inline-flex;
+            gap: 100px;
+            margin-left: 200px;
+            margin-top: 100px;
+        
+        }
+        .cl{
+            padding-left: 420px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+
+        <div class="div1" style="display: block;">
+            <img class="dice1" src="https://media.tenor.com/IfbgWLbg_88AAAAC/dice.gif" alt="">
+            <h1 class="pl1">player1</h1>
+            
+            
+
+        </div>
+        <div class="div2" style="display: block;">
+            <img class="dice2" src="https://media.tenor.com/IfbgWLbg_88AAAAC/dice.gif" alt="">
+            <h1 class="pl2">player2</h1>
+            <!-- <button class="player2" onclick="function1()">Roll</button> -->
+            
+
+        </div>
+        
+       
+       
+        
+    </div>
+    <div class="cl">
+        
+        <button class="player1" onclick="function1()">Roll</button>
+        <h1 class="result"></h1>
+    </div>
+    
+    
+   
+</body>
+<script>
+    p1=prompt("Enter player1 name")
+    p2=prompt("Enter player2 name")
+   
+    function function1(){
+        d1=[1,2,3,4,5,6]
+        r1=Math.floor(Math.random()*6)
+        document.querySelector('.dice1').setAttribute('src',`${d1[r1]}.png`)
+        document.querySelector('.pl1').innerHTML=`${p1}`
+
+
+        d2=[1,2,3,4,5,6]
+        r2=Math.floor(Math.random()*6)
+        document.querySelector('.dice2').setAttribute('src',`${d2[r2]}.png`)
+        document.querySelector('.pl2').innerHTML=`${p2}`
+        
+        if(r1>r2){
+
+           
+            document.querySelector('.result').innerHTML=`The winner is ${p1}`
+        }
+        else if(r1<r2){
+            
+            document.querySelector('.result').innerHTML=`The winner is ${p2}`
+
+        }
+        else if(r1==r2){
+            document.querySelector('.result').innerHTML=`It is Draw`
+
+        }
+
+    }
+   
+    
+
+   </script>
+</html>

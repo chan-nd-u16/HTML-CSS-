@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .eyeboder{
+            display: inline flex;
+            margin: 50px;
+            height: 100px;
+            width: 100px;
+            border: dotted;
+            border-radius: 0px 100px 0px 100px;
+            rotate: -45deg;
+
+
+        }
+        .eyeboder:hover{
+            display: inline flex;
+            margin: 50px;
+            height: 110px;
+            width: 110px;
+            border: dotted rgb(238, 130, 130);
+            border-radius: 0px 100px 0px 100px;
+            rotate: -45deg;
+
+
+        }
+        .eyeball{
+            
+            height:50px;
+            width: 50px;
+            background-color: black;
+            border-radius: 50%;
+            margin: 25px;
+
+        }
+        .nose{
+            height: 0px;
+            width: 0px;
+            border-left: 35px solid transparent;
+            border-right: 35px solid transparent;
+            border-bottom: 70px solid rgb(189, 177, 45);
+            
+            margin: -40px;
+            
+        }
+        .mouth{
+            width: 75px;
+            height: 75px;
+            background-color: rgb(0, 255, 255);
+            border-radius: 0% 100% 0% 50%;
+            rotate: -45deg;
+            margin: 55px;
+            
+            
+        }
+        .parent{
+            display: none;
+        }
+        .oriface{
+
+            display: none;
+        }
+        .alterparent{
+            display: block;
+        }
+        .alteroriface{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="parent" align="center">
+        <div class="eyeboder">
+            <div class="eyeball">
+
+            </div>
+            
+        </div>
+        <div class="eyeboder">
+            <div class="eyeball">
+
+            </div>
+
+        </div>
+        <div class="nose">
+
+        </div>
+        <div class="mouth"></div>
+    </div>
+    <div class="oriface">
+        <img src="https://vimeo.com/blog/wp-content/uploads/2023/05/Blog.jpg" alt="" height="500px">
+    </div>
+    <script>
+        a=prompt("enter even to show face and enter odd number to show animation:")
+        if(a%2!=0){
+            document.querySelector('.parent').classList.add('alterparent')
+        }
+        else if(a%2==0){
+            document.querySelector('.oriface').classList.add('alteroriface')
+        }
+
+    </script>
+</body>
+</html>

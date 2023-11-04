@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            /* padding: ; */
+        }
+        #check{
+            display: none;
+            
+        }
+        .lab{
+            position: fixed;
+            right: 0;
+            display: none;
+            margin-top: 40px;
+            
+        }
+
+        
+        
+        
+
+        @media(max-width:600px){
+
+            .lab{
+            display: block;
+        }
+            
+            .parent .menuitems .ref{
+                /* display:none; */
+                position: fixed;
+                margin-top: 104px;
+                right:-1000px;
+                
+                
+            
+        }
+            
+            
+        #check:checked ~ .menuitems .ref{
+
+            display:flex;
+            flex-direction: column;
+           margin-top: 104px;
+           right: 0px;
+           background-color: lightseagreen;
+           border-radius: 10% 0% 0% 10%;
+           
+          transition: 1s;
+          
+            
+        
+        }
+        
+
+        }
+        nav img{
+            height: 100px;
+            width: 100px;
+        }
+
+        
+        nav{
+            display: flex;
+            background-color: aqua;
+
+            /* justify-content: space-between;
+            align-items: center; */
+        }
+        .menuitems{
+            flex: 2;
+            background-color: aquamarine;
+        }
+        .logo{
+            flex: 3;
+            background-color: blueviolet;
+        }
+        nav .parent{
+            display: inline flex;
+        }
+        .menuitems .ref {
+            display:flex;
+            position: fixed;
+            right: 0;
+            padding: 40px;
+            
+            
+        }
+        .menuitems .ref * {
+           padding: 5px;
+            
+        }
+        
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+    <nav>
+        
+        
+        <div class="parent">
+            <div class="nav">
+                
+            </div>
+            
+            
+
+            <div class="logo">
+                <img src="https://hysterchat.com/file/group-avatars/26/1689751509-bpfull.png" alt="logo">
+            </div>
+            <input type="checkbox" name="" id="check">
+            
+                <label for="check" class="lab">
+                    <i class="fa-solid fa-bars"></i>
+    
+                </label>
+           
+            
+        
+        <div class="menuitems">
+            
+            
+            
+
+            <div class=" r ref">
+
+                
+                 
+                
+                    <div class=" g menuitem1"><a href="#">HOME</a></div> 
+                    <div class=" g menuitem2"><a href="#">SERVICES</a></div>
+                    <div class=" g menuitem3"><a href="#">ABOUT</a></div>                  
+                    <div class=" g menuitem4"><a href="#">CASES</a></div>                  
+                    <div class=" g menuitem5"><a href="#">BLOG</a></div>                 
+                             
+                </div>
+            
+        </div>
+    </div>
+    </nav>
+</body>
+</html>

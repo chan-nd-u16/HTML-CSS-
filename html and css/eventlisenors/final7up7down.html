@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7up 7down</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tilt+Prism&display=swap" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
+
+    <style>
+        .ashup{
+            height: 200px;
+            width: 200px;
+            background-color:#FBA1B7;
+            text-align: center;
+            border: solid black;
+            margin-left: 27%;
+            transition: 3s;
+
+
+        }
+        .ash{
+            height: 200px;
+            width: 200px;
+            background-color: #FFEECC;
+            text-align: center;
+            border: solid black;
+            
+
+        }
+        body{
+            /* background-color: #DFCCFB; */
+            /* background-color: #8EC5FC; */
+/* background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+/* background-color: #8EC5FC; */
+background-image: linear-gradient(#dfccfb, #c78bff, #6bb2f9);
+
+
+            /* font-family: 'Bebas Neue', sans-serif; */
+            font-family: 'Tilt Prism', cursive;
+            /* background:conic-gradient(from -90deg at top left, black, white); */
+            /* background: conic-gradient(from 90deg at 50% 125%, #1f005c, #003298, #005ac6, #007fdc, #00a2d3, #00c4ae, #00e474, #00ff00, #1f005c, #003298, #005ac6, #007fdc, #00a2d3, #00c4ae, #00e474, #00ff00); */
+            /* background:  conic-gradient(from 90deg at 25% -10%, #ff4500, #d3f340, #7bee85, #afeeee, #7bee85); */
+        }
+        
+        .block{
+            display: flex;
+            gap: 5%;
+            padding-left:20%;
+        }
+        .sevenup{
+            height: 200px;
+            width: 200px;
+            background-color:#FBA1B7;
+            text-align: center;
+            border: solid black;
+            
+            
+            
+
+        }
+        .sevenup:hover{
+            scale: 1.1;
+            background-color:#40F8FF;
+            transition: 2s;
+            box-shadow:5px  black;
+            box-shadow: 10px 10px black;
+        
+            
+           
+
+        }
+        .seven{
+            height: 200px;
+            width: 200px;
+            background-color: #A8DF8E;
+            text-align: center;
+            border: solid black;
+        }
+        .seven:hover{
+            scale: 1.1;
+            background-color:#FFEECC; 
+            transition: 2s;
+            box-shadow: 10px 10px black;
+        }
+
+        
+        .sevendown{
+            height: 200px;
+            width: 200px;
+            background-color:#FBA1B7 ;
+            text-align: center;
+            border: solid black;
+            
+            
+
+        }
+        .sevendown:hover{
+            scale: 1.1;
+            background-color:#40F8FF;
+            transition: 2s;
+            box-shadow:5px  black;
+            box-shadow: 10px 10px  black;
+           
+
+        }
+        .gif{
+            display: flex;
+            padding-left: 35%;
+            padding-top: 5%;
+            gap: 5%;
+        
+        }
+        .dice1{
+            height: 150px;
+            width: 150px;
+            border-radius: 20%;
+            /* transition: 10S; */
+        
+        }
+        .dice2{
+            height: 150px;
+            width: 150px;
+            border-radius: 20%;
+            /* transition: 10s; */
+        
+        }
+        /* .pre{
+            height: 200px;width: 200px;
+        } */
+        .form{
+            padding-left: 25%;
+            padding-top: 2%;
+        }
+        .pre{
+            width: 25%;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="padding-left: 32%;margin-top: 0px;">Choose Any one of your choice</h1>
+    
+    <div class="block">
+        <div class="sevenup">
+            <button style="margin-top: 38%;background-color:transparent;" onclick="but1()">sevenup</button>
+
+        </div>
+        <div class="seven">
+            <button style="margin-top: 38%;background-color:transparent;" onclick="but2()">seven</button>
+
+        </div>
+        <div class="sevendown">
+            <button style="margin-top: 38%;background-color:transparent;" onclick="but3()">sevendown</button>
+
+        </div>
+    </div>
+    <div class="gif">
+        <img src="https://media.tenor.com/IfbgWLbg_88AAAAC/dice.gif" alt=""class="dice1" style="border:7px solid white">
+        <img src="https://media.tenor.com/IfbgWLbg_88AAAAC/dice.gif" alt=""class="dice2" style="border: 7px solid white">
+        <img src="" alt="" class="pre">
+    </div>
+    <div class="form">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="putname">
+        
+        <label for="amt">Amount</label>
+        <input type="number" name="amt" id="putamt">
+        <label for="choice">Select Choice</label>
+        <select name="choice" id="putchoice">
+            <option></option>
+            <option value="1">sevenup</option>
+            <option value="2">seven</option>
+            <option value="3">sevendown</option>
+        </select>
+    </div>
+    
+    <button class ="roll" style="margin-left: 47.5%;margin-top: 2%;" onclick="roll()"> SUBMIT & ROLL</button>
+    <!-- ==============================empty h1 tag============= -->
+    <h1 class="result" style="text-align: center;"></h1>
+    <script>
+        function but1(){
+            
+            document.querySelector('.result').style.display="none"
+            document.getElementById('putchoice').value='1'
+            let click=new Audio('mouseclick.wav')
+            click.play()
+           
+            document.getElementsByClassName('seven')[0].style.display="none"
+            document.getElementsByClassName('sevendown')[0].style.display="none"
+            document.getElementsByClassName('sevenup')[0].classList.add("ashup")
+            document.getElementsByClassName('pre')[0].style.display="none"
+        
+            
+
+
+
+        }
+        function but2(){
+            document.querySelector('.result').style.display="none"
+            document.getElementsByClassName('sevenup')[0].style.display="none"
+            document.getElementsByClassName('sevendown')[0].style.display="none"
+            document.getElementsByClassName('seven')[0].classList.add("ashup")
+            document.getElementById('putchoice').value='2'
+            let click=new Audio('mouseclick.wav')
+            click.play()
+            document.getElementsByClassName('pre')[0].style.display="none"
+
+        }
+        function but3(){
+            document.querySelector('.result').style.display="none"
+            document.getElementsByClassName('sevenup')[0].style.display="none"
+            document.getElementsByClassName('seven')[0].style.display="none"
+            document.getElementsByClassName('sevendown')[0].classList.add("ashup")
+            document.getElementById('putchoice').value='3'
+            let click=new Audio('mouseclick.wav')
+            click.play()
+            document.getElementsByClassName('pre')[0].style.display="none"
+
+        }
+        
+
+
+
+        function roll(){
+            let dice=new Audio('spin.wav')
+            dice.play()
+            
+            
+
+            
+            
+
+            let n=document.getElementById('putname').value
+            let c=Number(document.getElementById('putchoice').value)
+            let a=document.getElementById('putamt').value
+
+
+            document.getElementsByClassName('pre')[0].style.display="block"
+            document.querySelector('.pre').setAttribute('src','')
+            document.querySelector('.result').innerHTML=``
+
+        // =====================================================================
+            let d1=[1,2,3,4,5,6]
+            let r1=Math.floor(Math.random()*6)
+            let d2=[1,2,3,4,5,6]
+            let r2=Math.floor(Math.random()*6)
+
+            let myInterval=setInterval(diceRotateGif,100)
+
+                function diceRotateGif(){
+                
+                let d1=[1,2,3,4,5,6]
+                let r1=Math.floor(Math.random()*6)
+                let d2=[1,2,3,4,5,6]
+                let r2=Math.floor(Math.random()*6)
+                document.querySelector('.dice1').setAttribute('src',`${d1[r1]}.png`)
+                document.querySelector('.dice2').setAttribute('src',`${d2[r2]}.png`)
+            }
+            setTimeout(clear,4000)
+            function clear(){
+                clearInterval(myInterval)
+                document.querySelector('.dice1').setAttribute('src',`${d1[r1]}.png`)
+                document.querySelector('.dice2').setAttribute('src',`${d2[r2]}.png`)
+                document.querySelector('.result').style.display="block"
+
+            document.getElementsByClassName('sevenup')[0].classList.remove("ashup")
+            document.getElementsByClassName('seven')[0].classList.remove("ashup")
+            document.getElementsByClassName('sevendown')[0].classList.remove("ashup")
+            
+            document.getElementsByClassName('sevenup')[0].style.display="block"
+            document.getElementsByClassName('seven')[0].style.display="block"
+            document.getElementsByClassName('sevendown')[0].style.display="block"
+
+            let total=d1[r1]+d2[r2]//total of dice
+        if(c==1){//user value condition check  for seven up
+
+            if(total>7){//win condition for 7up
+
+                let win1=new Audio('sing.mp3')
+                win1.play()
+                setTimeout(stopper,7000)
+                function stopper(){
+                   win1.pause() 
+                }
+                document.querySelector('.pre').setAttribute('src','https://i.pinimg.com/originals/1e/c9/15/1ec915eb76dcff7edf9e5c195b70363f.gif')
+                let aa=a*2
+                document.querySelector('.result').innerHTML=`we  got  ${total},congrats ${n}  you  won  2X  Amount: ${aa}`//print statement in  empty h1 tag 
+            }
+            else{//lose
+                let lost1=new Audio('neg.mp3')
+                lost1.play()
+                document.querySelector('.pre').setAttribute('src','https://i0.wp.com/www.techjunkie.com/wp-content/uploads/2018/03/Gif-Ideas-about-Becoming-Sad-1.gif?w=690&ssl=1')
+                document.querySelector('.result').innerHTML=`${n} you  lost  your  Amount,${total} is   not   7up`//print statement in  empty h1 tag 
+
+
+            }
+
+        }
+        else if(c==2){//user value condition check for 7
+
+            if(total==7){//win condition for 7
+
+                let win1=new Audio('sing.mp3')
+                win1.play()
+                setTimeout(stopper,7000)
+                function stopper(){
+                   win1.pause() 
+                }
+                document.querySelector('.pre').setAttribute('src','https://i.pinimg.com/originals/1e/c9/15/1ec915eb76dcff7edf9e5c195b70363f.gif')
+                let aa=a*3
+                document.querySelector('.result').innerHTML=`we  got  ${total},congrats  ${n}  you  won  3x  Amount:${aa}`
+            }
+            else{
+                let lost1=new Audio('neg.mp3')
+                lost1.play()
+                document.querySelector('.pre').setAttribute('src','https://i0.wp.com/www.techjunkie.com/wp-content/uploads/2018/03/Gif-Ideas-about-Becoming-Sad-1.gif?w=690&ssl=1')
+                document.querySelector('.result').innerHTML=`${n} you  lost  your  Amount ,${total}  is   not  7`
+
+
+            }
+
+            }
+        else if(c==3){
+
+                    if(total<7){
+
+                        let win1=new Audio('sing.mp3')
+                        win1.play()
+                        setTimeout(stopper,7000)
+                        function stopper(){
+                        win1.pause() 
+                        }
+                        document.querySelector('.pre').setAttribute('src','https://i.pinimg.com/originals/1e/c9/15/1ec915eb76dcff7edf9e5c195b70363f.gif')
+                        let aa=a*2
+                        document.querySelector('.result').innerHTML=`we  got  ${total}, congrats  ${n} you  won  2X  Amount${aa}`
+                    }
+                    else{
+                        let lost1=new Audio('neg.mp3')
+                        lost1.play()
+                        document.querySelector('.pre').setAttribute('src','https://i0.wp.com/www.techjunkie.com/wp-content/uploads/2018/03/Gif-Ideas-about-Becoming-Sad-1.gif?w=690&ssl=1')
+                        document.querySelector('.result').innerHTML=`${n} you  lost  your  Amount, ${total} is  not   7down`
+
+
+                    }
+
+                }
+            }
+
+            
+    
+        
+
+            
+        // ======================================================================================
+        
+
+
+
+
+        
+            
+        }
+        
+
+      
+        
+       
+        
+        
+        
+      
+        // function seven(){
+            
+        //     if(total==7){
+                
+        //         let win1=new Audio('barbie.mp3')
+        //         win1.play()
+        //         document.querySelector('.pre').setAttribute('src','https://media.tenor.com/wwcY7OhagdsAAAAj/bt21-koya.gif')
+        //         am1=b1*2
+        //         document.querySelector('.result').innerHTML=`we got ${total},congrats ${a1} you won ${am1}`
+        //     }
+        //     else{
+        //         let lost1=new Audio('sad.wav')
+        //         lost1.play()
+        //         document.querySelector('.pre').setAttribute('src','https://media.giphy.com/media/ZGH8VtTZMmnwzsYYMf/giphy.gif')
+        //         document.querySelector('.result').innerHTML=`${a1} you lose ,${total} is  not  7`
+
+        //     }
+        // }
+        // function sevendown(){
+        //     // a2=prompt("Enter the name")
+        //     // b2=prompt("Enter the amount")
+        //     let d1=[1,2,3,4,5,6]
+        //     let r1=Math.floor(Math.random()*6)
+        //     document.querySelector('.dice1').setAttribute('src',`${d1[r1]}.png`)
+        
+
+
+        //     let d2=[1,2,3,4,5,6]
+        //     let r2=Math.floor(Math.random()*6)
+        //     document.querySelector('.dice2').setAttribute('src',`${d2[r2]}.png`)
+        
+        //     let total=d1[r1]+d2[r2]
+        //     if(total<7){
+        //         let win1=new Audio('barbie.mp3')
+        //         win1.play()
+        //         document.querySelector('.pre').setAttribute('src','https://media.tenor.com/wwcY7OhagdsAAAAj/bt21-koya.gif')
+        //         am2=b2*2
+        //         document.querySelector('.result').innerHTML=`we got ${total},congrats ${a2} you won ${am2}`
+        //     }
+        //     else{
+        //         // let lose1=new Audio('lost.mp3')
+        //         // lose1.play()
+        //         let lost1=new Audio('sad.wav')
+        //         lost1.play()
+        //         document.querySelector('.pre').setAttribute('src','https://media.giphy.com/media/ZGH8VtTZMmnwzsYYMf/giphy.gif')
+        //         document.querySelector('.result').innerHTML=`${a2} you lose ,${total} is  not  7down`
+
+        //     }
+        // }
+        
+        
+        
+
+
+
+
+    </script>
+    
+</body>
+</html>

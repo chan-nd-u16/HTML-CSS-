@@ -1,0 +1,2133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .parentcontainer1{
+            display: grid;
+            grid-template-columns: repeat(4,320px);
+            grid-template-rows: repeat(3,280px);
+            gap: 5px;
+        } */
+        /* 1 grid */
+        .childcontainer1{
+            background-color: black;
+            display: grid;
+            padding: 5px;
+            grid-template-columns: repeat(7,60px);
+            grid-template-rows: 60px 30px 60px 60px 60px 60px 60px;
+            gap: 5px;
+        }
+        .childcontainer1 .color1{
+            grid-column: 1/2;
+            grid-row:1/5;
+            background-color: red;
+        }
+        .childcontainer1 .color2{
+            grid-column: 2/3;
+            grid-row:1/5;
+            background-color: white;
+        }
+        .childcontainer1 .color3{
+            grid-column: 3/4;
+            grid-row:1/5;
+            background-color: white;
+        }
+        .childcontainer1 .color4{
+            grid-column: 4/5;
+            grid-row:1/2;
+            background-color: white;
+        }
+        .childcontainer1 .color5{
+            grid-column: 4/5;
+            grid-row:2/4;
+            background-color: white;
+        }
+        .childcontainer1 .color6{
+            grid-column: 4/5;
+            grid-row:4/5;
+            background-color: white;
+        }
+        .childcontainer1 .color7{
+            grid-column: 5/6;
+            grid-row:1/3;
+            background-color: white;
+        }
+        .childcontainer1 .color8{
+            grid-column: 5/6;
+            grid-row:3/5;
+            background-color: white;
+        }
+        .childcontainer1 .color9{
+            grid-column: 6/7;
+            grid-row:1/3;
+            background-color: white;
+        }
+        .childcontainer1 .color10{
+            grid-column: 6/7;
+            grid-row:3/5;
+            background-color: white;
+        }
+        .childcontainer1 .color11{
+            grid-column: 7/8;
+            grid-row:1/3;
+            background-color: white;
+        }
+        .childcontainer1 .color12{
+            grid-column: 7/8;
+            grid-row:3/5;
+            background-color: white;
+        }
+         .childcontainer1 .color13{
+            grid-column: 1/2;
+            grid-row: 5/6;
+            background-color: blue;
+        }
+        
+        .childcontainer1 .color14{
+            grid-column: 3/4;
+            grid-row: 5/6;
+            background-color: blue;
+        }
+        .childcontainer1 .color15{
+            grid-column: 3/4;
+            grid-row: 7/8;
+            background-color: yellow;
+        }
+        .childcontainer1 .color16{
+            grid-column: 5/8;
+            grid-row: 5/6;
+            background-color: blue;
+        } 
+        .childcontainer1 .color17{
+            grid-column: 5/8;
+            grid-row: 6/7;
+            background-color: white;
+        }
+        .childcontainer1 .color18{
+            grid-column: 5/8;
+            grid-row: 7/8;
+            background-color: white;
+        }
+        .childcontainer1 div{
+            background-color: aliceblue;
+        }
+        /* grid 2 */
+        .childcontainer2{
+            background-color: black;
+            display: grid;
+            padding: 5px;
+            grid-template-columns: repeat(10,52.8px);
+            grid-template-rows: repeat(12,36px);
+            gap: 5px;
+        }
+        .childcontainer2 .color1{
+            grid-column: 1/2;
+            grid-row: 1/4;
+            background-color: white;
+        }
+        .childcontainer2 .color2{
+            grid-column: 2/3;
+            grid-row: 1/4;
+            background-color: white;
+        }
+        .childcontainer2 .color3{
+            grid-column: 3/5;
+            grid-row: 1/4;
+            background-color: yellow;
+        }
+        .childcontainer2 .color4{
+            grid-column: 3/5;
+            grid-row: 1/4;
+            background-color: yellow;
+        }
+        .childcontainer2 .color5{
+            grid-column: 5/7;
+            grid-row: 1/4;
+            background-color: white;
+        }
+        .childcontainer2 .color6{
+            grid-column: 7/9;
+            grid-row: 1/4;
+            background-color: white;
+        }
+        .childcontainer2 .color7{
+            grid-column: 10/11;
+            grid-row: 3/4;
+            background-color: blue;
+        }
+        .childcontainer2 .color8{
+            grid-column: 1/2;
+            grid-row: 4/7;
+            background-color: white;
+        }
+        .childcontainer2 .color9{
+            grid-column: 2/3;
+            grid-row: 4/7;
+            background-color: white;
+        }
+        .childcontainer2 .color10{
+            grid-column: 3/4;
+            grid-row: 5/6;
+            background-color: blue;
+        }
+        .childcontainer2 .color11{
+            grid-column: 3/4;
+            grid-row: 6/7;
+            background-color: blue;
+        }
+        .childcontainer2 .color12{
+            grid-column: 4/5;
+            grid-row: 5/6;
+            background-color: yellow;
+        }
+        .childcontainer2 .color13{
+            grid-column: 5/7;
+            grid-row: 4/7;
+            background-color: red;
+        }
+        .childcontainer2 .color14{
+            grid-column: 7/8;
+            grid-row: 4/7;
+            background-color: white;
+        }
+        .childcontainer2 .color15{
+            grid-column: 8/9;
+            grid-row: 4/7;
+            background-color: white;
+        }
+        .childcontainer2 .color16{
+            grid-column: 9/11;
+            grid-row: 4/7;
+            background-color: red;
+        }
+        .childcontainer2 .color17{
+            grid-column: 1/2;
+            grid-row: 7/9;
+            background-color: red;
+        }
+        .childcontainer2 .color18{
+            grid-column: 2/3;
+            grid-row: 7/9;
+            background-color: white;
+        }
+        .childcontainer2 .color19{
+            grid-column: 3/5;
+            grid-row: 7/9;
+            background-color: blue;
+        }
+        .childcontainer2 .color20{
+            grid-column: 5/7;
+            grid-row: 7/9;
+            background-color: white;
+        }
+        .childcontainer2 .color21{
+            grid-column: 7/9;
+            grid-row: 7/8;
+            background-color: white;
+        }
+        .childcontainer2 .color22{
+            grid-column: 7/9;
+            grid-row: 8/9;
+            background-color: white;
+        }
+        .childcontainer2 .color23{
+            grid-column: 9/11;
+            grid-row: 7/9;
+            background-color: white;
+        }
+        .childcontainer2 .color24{
+            grid-column: 1/2;
+            grid-row: 9/10;
+            background-color: yellow;
+        }
+        .childcontainer2 .color25{
+            grid-column: 1/2;
+            grid-row: 10/11;
+            background-color: yellow;
+        }
+        .childcontainer2 .color26{
+            grid-column: 3/5;
+            grid-row: 9/10;
+            background-color: white;
+        }
+        .childcontainer2 .color27{
+            grid-column: 3/5;
+            grid-row: 10/11;
+            background-color: white;
+        }
+        .childcontainer2 .color28{
+            grid-column: 7/5;
+            grid-row: 9/10;
+            background-color: blue;
+        }
+        .childcontainer2 .color29{
+            grid-column: 5/6;
+            grid-row: 10/11;
+            background-color: yellow;
+        }
+        .childcontainer2 .color30{
+            grid-column: 7/9;
+            grid-row: 9/10;
+            background-color: yellow;
+        }
+        .childcontainer2 .color31{
+            grid-column: 7/9;
+            grid-row: 10/11;
+            background-color: white;
+        }
+        .childcontainer2 .color32{
+            grid-column: 9/11;
+            grid-row: 10/11;
+            background-color: white;
+        }
+        .childcontainer2 .color33{
+            grid-column: 9/11;
+            grid-row: 9/10;
+            background-color: white;
+        }
+        .childcontainer2 .color34{
+            grid-column: 2/3;
+            grid-row: 11/13;
+            background-color: white;
+        }
+        .childcontainer2 .color35{
+            grid-column: 3/5;
+            grid-row: 11/13;
+            background-color: white;
+        }
+        .childcontainer2 .color36{
+            grid-column: 5/7;
+            grid-row: 11/13;
+            background-color: white;
+        }
+        .childcontainer2 .color37{
+            grid-column: 7/9;
+            grid-row: 11/13;
+            background-color: white;
+        }
+        .childcontainer2 .color38{
+            grid-column: 9/11;
+            grid-row: 11/13;
+            background-color: white;
+        }
+        .childcontainer2 div{
+            background-color: aliceblue;
+        }
+        
+        /* grid 3 */
+        .childcontainer3{
+            background-color: black;
+            display: grid;
+            padding: 5px;
+            grid-template-columns: repeat(30,11px);
+            grid-template-rows: repeat(5,50px);
+            gap: 5px;
+        }
+        .childcontainer3 .color1{
+            grid-column: 1/5;
+            grid-row: 1/2;
+            background-color: white;
+        }
+        .childcontainer3 .color2{
+            grid-column: 5/9;
+            grid-row: 1/2;
+            background-color: white;
+        }
+        .childcontainer3 .color3{
+            grid-column: 9/13;
+            grid-row: 1/2;
+            background-color: white;
+        }
+        .childcontainer3 .color4{
+            grid-column: 13/16;
+            grid-row: 1/2;
+            background-color: white;
+        }
+        .childcontainer3 .color5{
+            grid-column: 16/22;
+            grid-row: 1/2;
+            background-color: white;
+        }
+        .childcontainer3 .color6{
+            grid-column: 22/25;
+            grid-row: 1/2;
+            background-color: white;
+        }
+        .childcontainer3 .color7{
+            grid-column: 25/28;
+            grid-row: 1/2;
+            background-color: white;
+        }
+        .childcontainer3 .color8{
+            grid-column: 28/31;
+            grid-row: 1/2;
+            background-color: white;
+        }
+        .childcontainer3 .color9{
+            grid-column: 1/4;
+            grid-row: 2/3;
+            background-color: white;
+        }
+        .childcontainer3 .color10{
+            grid-column: 4/7;
+            grid-row: 2/3;
+            background-color: red;
+        }
+        .childcontainer3 .color11{
+            grid-column: 7/10;
+            grid-row: 2/3;
+            background-color: white;
+        }
+        .childcontainer3 .color12{
+            grid-column: 10/13;
+            grid-row: 2/3;
+            background-color: white;
+        }
+        .childcontainer3 .color13{
+            grid-column: 13/16;
+            grid-row: 2/3;
+            background-color: white;
+        }
+        .childcontainer3 .color14{
+            grid-column: 16/22;
+            grid-row: 2/3;
+            background-color: white;
+        }
+        .childcontainer3 .color15{
+            grid-column: 22/25;
+            grid-row: 2/3;
+            background-color: blue;
+        }
+        .childcontainer3 .color16{
+            grid-column: 25/28;
+            grid-row: 2/3;
+            background-color: yellow;
+        }
+        .childcontainer3 .color17{
+            grid-column: 28/31;
+            grid-row: 2/3;
+            background-color: white;
+        }
+        .childcontainer3 .color18{
+            grid-column: 1/13;
+            grid-row: 3/5;
+            background-color: white;
+        }
+        .childcontainer3 .color19{
+            grid-column: 13/16;
+            grid-row: 3/5;
+            background-color: white;
+        }
+        .childcontainer3 .color20{
+            grid-column: 16/19;
+            grid-row: 3/4;
+            background-color: yellow;
+        }
+        .childcontainer3 .color21{
+            grid-column: 19/22;
+            grid-row: 3/4;
+            background-color: yellow;
+        }
+        .childcontainer3 .color22{
+            grid-column: 16/19;
+            grid-row: 4/5;
+            background-color: white;
+        }
+        .childcontainer3 .color23{
+            grid-column: 19/22;
+            grid-row: 4/5;
+            background-color: white;
+        }
+        .childcontainer3 .color24{
+            grid-column: 22/25;
+            grid-row: 3/5;
+            background-color: white;
+        }
+        .childcontainer3 .color25{
+            grid-column: 25/28;
+            grid-row: 3/5;
+            background-color: yellow;
+        }
+        .childcontainer3 .color26{
+            grid-column: 28/31;
+            grid-row: 3/5;
+            background-color: white;
+        }
+        .childcontainer3 .color27{
+            grid-column: 1/13;
+            grid-row: 5/6;
+            background-color: red;
+        }
+        .childcontainer3 .color28{
+            grid-column: 13/16;
+            grid-row: 5/6;
+            background-color: white;
+        }
+        .childcontainer3 .color29{
+            grid-column: 16/22;
+            grid-row: 5/6;
+            background-color: white;
+        }
+        .childcontainer3 .color30{
+            grid-column: 22/25;
+            grid-row: 5/6;
+            background-color: white;
+        }
+        .childcontainer3 .color31{
+            grid-column: 25/28;
+            grid-row: 5/6;
+            background-color: yellow;
+        }
+        .childcontainer3 .color32{
+            grid-column: 28/31;
+            grid-row: 5/6;
+            background-color: white;
+        }
+        /* grid 4 */
+        .childcontainer4{
+            background-color: black;
+            display: grid;
+            padding: 5px;
+            grid-template-columns: repeat(10,26.5px);
+            grid-template-rows: repeat(9,29.5px);
+            gap: 5px;
+        }
+        
+        .childcontainer4 .color1{
+            grid-column: 1/4;
+            grid-row: 1/4;
+            background-color: yellow;
+        }
+        .childcontainer4 .color2{
+            grid-column: 4/5;
+            grid-row: 1/4;
+            background-color: white;
+        }
+        .childcontainer4 .color3{
+            grid-column: 8/11;
+            grid-row: 1/4;
+            background-color: white;
+        }
+        .childcontainer4 .color4{
+            grid-column: 1/4;
+            grid-row: 4/5;
+            background-color: white;
+        }
+        .childcontainer4 .color5{
+            grid-column: 1/4;
+            grid-row: 5/6;
+            background-color: white;
+        }
+        .childcontainer4 .color6{
+            grid-column: 1/4;
+            grid-row: 6/7;
+            background-color: white;
+        }
+        .childcontainer4 .color7{
+            grid-column: 4/5;
+            grid-row: 4/6;
+            background-color: white;
+        }
+        .childcontainer4 .color8{
+            grid-column: 5/8;
+            grid-row: 4/6;
+            background-color: blue;
+        }
+        .childcontainer4 .color9{
+            grid-column: 8/9;
+            grid-row: 4/6;
+            background-color: white;
+        }
+        .childcontainer4 .color10{
+            grid-column: 9/10;
+            grid-row: 4/6;
+            background-color: white;
+        }
+        .childcontainer4 .color11{
+            grid-column: 10/11;
+            grid-row: 4/6;
+            background-color: yellow;
+        }
+        .childcontainer4 .color12{
+            grid-column: 5/8;
+            grid-row: 6/7;
+            background-color: white;
+        }
+        .childcontainer4 .color13{
+            grid-column: 8/11;
+            grid-row: 6/7;
+            background-color: white;
+        }
+        .childcontainer4 .color14{
+            grid-column: 1/2;
+            grid-row: 7/8;
+            background-color: red;
+        }
+        .childcontainer4 .color15{
+            grid-column: 3/4;
+            grid-row: 7/8;
+            background-color: blue;
+        }
+        .childcontainer4 .color16{
+            grid-column: 4/5;
+            grid-row: 7/9;
+            background-color: blue;
+        }
+        .childcontainer4 .color17{
+            grid-column: 5/8;
+            grid-row: 7/9;
+            background-color: blue;
+        }
+        .childcontainer4 .color18{
+            grid-column: 8/11;
+            grid-row: 7/9;
+            background-color: white;
+        }
+        .childcontainer4 div{
+            background-color: white;
+        }
+        
+        /* grid 5 */
+        .childcontainer5{
+            background-color: black;
+            display: grid;
+            padding: 5px;
+            grid-template-columns: 26px 13px 13px 26px 26px 26px 26px 26px 26px 26px 26px ;
+            grid-template-rows: repeat(10,22.5px);
+            gap: 5px;
+        }
+        .childcontainer5 .color1{
+            grid-column: 4/5;
+            grid-row: 1/2;
+            background-color: yellow;
+        }
+        .childcontainer5 .color2{
+            grid-column: 2/4;
+            grid-row: 2/3;
+            background-color: red;
+        }
+        .childcontainer5 .color3{
+            grid-column: 5/7;
+            grid-row: 1/3;
+            background-color: white;
+        }
+        .childcontainer5 .color4{
+            grid-column: 7/8;
+            grid-row: 1/3;
+            background-color: white;
+        }
+        .childcontainer5 .color5{
+            grid-column: 10/11;
+            grid-row: 1/3;
+            background-color: white;
+        }
+        .childcontainer5 .color6{
+            grid-column: 10/11;
+            grid-row: 1/3;
+            background-color: white;
+        }
+        .childcontainer5 .color7{
+            grid-column: 11/12;
+            grid-row: 1/3;
+            background-color: white;
+        }
+        .childcontainer5 .color8{
+            grid-column: 1/3;
+            grid-row: 3/4;
+            background-color: blue;
+        }
+        .childcontainer5 .color9{
+            grid-column: 3/5;
+            grid-row: 3/4;
+            background-color: white;
+        }
+        .childcontainer5 .color10{
+            grid-column: 1/3;
+            grid-row: 4/5;
+            background-color: white;
+        }
+        .childcontainer5 .color11{
+            grid-column: 1/3;
+            grid-row: 5/6;
+            background-color: white;
+        }
+        .childcontainer5 .color12{
+            grid-column: 3/5;
+            grid-row: 4/5;
+            background-color: blue;
+        }
+        .childcontainer5 .color13{
+            grid-column: 3/5;
+            grid-row: 5/6;
+            background-color: red;
+        }  
+        .childcontainer5 .color14{
+            grid-column: 5/7;
+            grid-row: 3/6;
+            background-color: white;
+        }     
+        .childcontainer5 .color15{
+            grid-column: 7/8;
+            grid-row: 3/6;
+            background-color: white;
+        }
+        .childcontainer5 .color16{
+            grid-column: 8/10;
+            grid-row: 3/4;
+            background-color: white;
+        }
+        .childcontainer5 .color17{
+            grid-column: 8/10;
+            grid-row: 4/5;
+            background-color: white;
+        }
+        .childcontainer5 .color18{
+            grid-column: 8/10;
+            grid-row: 5/6;
+            background-color: white;
+        }
+        .childcontainer5 .color19{
+            grid-column: 10/11;
+            grid-row: 3/6;
+            background-color: white;
+        }
+        .childcontainer5 .color20{
+            grid-column: 11/12;
+            grid-row: 3/6;
+            background-color: white;
+        }
+        .childcontainer5 .color21{
+            grid-column: 1/5;
+            grid-row: 6/7;
+            background-color: white;
+        }
+        .childcontainer5 .color22{
+            grid-column: 1/5;
+            grid-row: 7/8;
+            background-color: white;
+        }
+        .childcontainer5 .color23{
+            grid-column: 5/7;
+            grid-row: 6/7;
+            background-color: white;
+        }
+        .childcontainer5 .color24{
+            grid-column: 5/7;
+            grid-row: 7/8;
+            background-color: white;
+        }
+        .childcontainer5 .color25{
+            grid-column: 8/10;
+            grid-row: 6/7;
+            background-color: red;
+        }
+        .childcontainer5 .color26{
+            grid-column: 8/10;
+            grid-row: 7/8;
+            background-color: white;
+        }
+        .childcontainer5 .color27{
+            grid-column: 11/12;
+            grid-row: 6/7;
+            background-color: red;
+        }
+        .childcontainer5 .color28{
+            grid-column: 1/5;
+            grid-row: 8/11;
+            background-color: white;
+        }
+        .childcontainer5 .color29{
+            grid-column: 6/7;
+            grid-row: 9/10;
+            background-color: yellow;
+        }
+        .childcontainer5 .color30{
+            grid-column: 7/8;
+            grid-row: 8/11;
+            background-color: white;
+        }
+        .childcontainer5 .color31{
+            grid-column: 8/10;
+            grid-row: 8/11;
+            background-color: white;
+        }
+        .childcontainer5 .color32{
+            grid-column: 10/11;
+            grid-row: 8/11;
+            background-color: white;
+        }
+        .childcontainer5 .color33{
+            grid-column: 11/12;
+            grid-row: 8/11;
+            background-color: blue;
+        }
+        .childcontainer5 .color34{
+            grid-column: 2/4;
+            grid-row: 1/2;
+            background-color: white;
+        }
+        .childcontainer5 div{
+            background-color: aliceblue;
+        }
+        .childcontainer6{
+            background-color: black;
+            display: grid;
+            padding: 5px;
+            grid-template-columns: repeat(9,31px);
+            grid-template-rows: 30px 30px 15px 15px 30px 30px 30px 30px 30px;
+            gap: 4px;
+        }
+        .childcontainer6 .color1{
+            grid-column: 1/3;
+            grid-row: 1/2;
+            background-color: white;
+        }
+        .childcontainer6 .color2{
+            grid-column: 7/9;
+            grid-row: 1/2;
+            background-color: red;
+        }
+        .childcontainer6 .color3{
+            grid-column: 1/2;
+            grid-row: 2/3;
+            background-color: blue;
+        }
+        .childcontainer6 .color4{
+            grid-column: 1/2;
+            grid-row: 3/5;
+            background-color: red;
+        }
+        .childcontainer6 .color5{
+            grid-column: 7/8;
+            grid-row: 3/5;
+            background-color: red;
+        }
+        .childcontainer6 .color6{
+            grid-column: 7/8;
+            grid-row: 5/6;
+            background-color: red;
+        }
+        .childcontainer6 .color7{
+            grid-column: 1/3;
+            grid-row: 6/9;
+            background-color: blue;
+        }
+        .childcontainer6 .color8{
+            grid-column: 7/8;
+            grid-row: 2/3;
+            background-color: yellow;
+        }
+        .childcontainer6 .color9{
+            grid-column: 4/7;
+            grid-row: 4/6;
+            background-color: yellow;
+        }
+        .childcontainer6 .color10{
+            grid-column: 3/4;
+            grid-row: 2/6;
+            background-color: white;
+        }
+        .childcontainer6 .color11{
+            grid-column: 4/7;
+            grid-row: 2/4;
+            background-color: white;
+        }
+        .childcontainer6 .color12{
+            grid-column: 9/10;
+            grid-row: 2/6;
+            background-color: white;
+        }
+        .childcontainer6 .color13{
+            grid-column: 3/4;
+            grid-row: 6/9;
+            background-color: white;
+        }
+        .childcontainer6 .color14{
+            grid-column: 4/7;
+            grid-row: 6/9;
+            background-color: white;
+        }
+        .childcontainer6 .color15{
+            grid-column: 3/4;
+            grid-row: 6/9;
+            background-color: white;
+        }
+        .childcontainer6 .color16{
+            grid-column: 7/9;
+            grid-row: 6/7;
+            background-color: white;
+        }
+        .childcontainer6 .color17{
+            grid-column: 7/9;
+            grid-row: 7/8;
+            background-color: white;
+        }
+        .childcontainer6 .color18{
+            grid-column: 7/9;
+            grid-row: 8/9;
+            background-color: white;
+        }
+        .childcontainer6 .color19{
+            grid-column: 9/10;
+            grid-row: 6/9;
+            background-color: white;
+        }
+        .childcontainer6 .color20{
+            grid-column: 1/3;
+            grid-row: 9/10;
+            background-color: white;
+        }
+        .childcontainer6 .color21{
+            grid-column: 4/7;
+            grid-row: 9/10;
+            background-color: white;
+        }
+        .childcontainer6 .color22{
+            grid-column: 7/9;
+            grid-row: 9/10;
+            background-color: white;
+        }
+        .childcontainer6 .color23{
+            grid-column: 2/3;
+            grid-row: 3/5;
+            background-color: white;
+        }
+        .childcontainer6 .color24{
+            grid-column: 8/9;
+            grid-row: 3/5;
+            background-color: white;
+        }
+        .childcontainer6 div{
+            background-color: aliceblue;
+        }
+        .childcontainer7{
+            background-color: black;
+            display: grid;
+            padding: 5px;
+            grid-template-columns: repeat(8,35.2px);
+            grid-template-rows:20.5px 10px 10px 20.5px 20.5px 20.5px 20.5px 20.5px 20.5px 20.5px 20.5px 20.5px ;
+            gap: 4px;
+        }
+        .childcontainer7 .color1{
+            grid-column: 1/4;
+            grid-row: 1/5;
+            background-color: red;
+        }
+        .childcontainer7 .color2{
+            grid-column: 4/6;
+            grid-row: 1/5;
+            background-color: red;
+        }
+        .childcontainer7 .color3{
+            grid-column: 8/9;
+            grid-row: 2/4;
+            background-color: red;
+        }
+        .childcontainer7 .color4{
+            grid-column: 2/3;
+            grid-row: 6/7;
+            background-color: red;
+        }
+        .childcontainer7 .color5{
+            grid-column: 1/4;
+            grid-row: 9/10;
+            background-color: red;
+        }
+        .childcontainer7 .color6{
+            grid-column: 4/5;
+            grid-row: 12/13;
+            background-color: red;
+        }
+        .childcontainer7 .color7{
+            grid-column: 6/7;
+            grid-row: 10/13;
+            background-color: red;
+        }
+        .childcontainer7 .color8{
+            grid-column: 1/2;
+            grid-row: 6/7;
+            background-color: blue;
+        }
+        .childcontainer7 .color9{
+            grid-column: 1/4;
+            grid-row: 10/13;
+            background-color: blue;
+        }
+        .childcontainer7 .color10{
+            grid-column: 4/5;
+            grid-row: 10/11;
+            background-color: blue;
+        }
+        .childcontainer7 .color11{
+            grid-column: 8/9;
+            grid-row: 4/5;
+            background-color: yellow;
+        }
+        .childcontainer7 .color12{
+            grid-column: 7/8;
+            grid-row: 10/13;
+            background-color: yellow;
+        }
+        .childcontainer7 .color13{
+            grid-column: 6/7;
+            grid-row: 1/5;
+            background-color: white;
+        }
+        .childcontainer7 .color14{
+            grid-column: 7/8;
+            grid-row: 1/3;
+            background-color: white;
+        }
+        .childcontainer7 .color15{
+            grid-column: 7/8;
+            grid-row: 3/5;
+            background-color: white;
+        }
+        .childcontainer7 .color16{
+            grid-column: 4/6;
+            grid-row: 5/8;
+            background-color: white;
+        }
+        .childcontainer7 .color17{
+            grid-column: 6/7;
+            grid-row: 5/8;
+            background-color: white;
+        }
+        .childcontainer7 .color18{
+            grid-column: 7/8;
+            grid-row: 5/8;
+            background-color: white;
+        }
+        .childcontainer7 .color19{
+            grid-column: 8/9;
+            grid-row: 5/8;
+            background-color: white;
+        }
+        .childcontainer7 .color20{
+            grid-column: 1/4;
+            grid-row: 8/9;
+            background-color: white;
+        }
+        .childcontainer7 .color21{
+            grid-column: 4/6;
+            grid-row: 8/9;
+            background-color: white;
+        }
+        .childcontainer7 .color22{
+            grid-column: 4/6;
+            grid-row: 9/10;
+            background-color: white;
+        }
+        .childcontainer7 .color23{
+            grid-column: 8/9;
+            grid-row: 10/13;
+            background-color: white;
+        }    
+        .childcontainer7 div{
+            background-color: aliceblue;
+        }
+        .childcontainer8{
+            background-color: black;
+            display: grid;
+            padding: 5px;
+            grid-template-columns: 27px 27px 13px 13px 27px 27px 27px 27px 27px 27px 27px ;
+            grid-template-rows: repeat(7,35px);
+            gap: 4px;
+        }
+        .childcontainer8 .color1{
+            grid-column: 6/7;
+            grid-row: 2/3;
+            background-color: yellow;
+        }
+        .childcontainer8 .color2{
+            grid-column: 9/10;
+            grid-row: 1/3;
+            background-color: yellow;
+        }
+        .childcontainer8 .color3{
+            grid-column: 5/6;
+            grid-row: 4/5;
+            background-color: yellow;
+        }
+        .childcontainer8 .color4{
+            grid-column: 2/4;
+            grid-row: 5/6;
+            background-color: yellow;
+        }
+        .childcontainer8 .color5{
+            grid-column: 2/4;
+            grid-row: 6/7;
+            background-color: yellow;
+        }
+        .childcontainer8 .color6{
+            grid-column: 6/9;
+            grid-row: 5/7;
+            background-color: yellow;
+        }
+        .childcontainer8 .color7{
+            grid-column: 6/7;
+            grid-row: 1/2;
+            background-color: blue;
+        }
+        .childcontainer8 .color8{
+            grid-column: 8/9;
+            grid-row: 7/8;
+            background-color: blue;
+        }
+        .childcontainer8 .color9{
+            grid-column: 1/2;
+            grid-row: 3/5;
+            background-color: red;
+        }
+        .childcontainer8 .color10{
+            grid-column: 3/5;
+            grid-row: 4/5;
+            background-color: red;
+        }
+        .childcontainer8 .color11{
+            grid-column: 9/11;
+            grid-row: 7/8;
+            background-color: red;
+        }
+        .childcontainer8 .color12{
+            grid-column: 1/2;
+            grid-row: 1/3;
+            background-color: white;
+        }
+        .childcontainer8 .color13{
+            grid-column: 2/6;
+            grid-row: 1/3;
+            background-color: white;
+        }
+        .childcontainer8 .color14{
+            grid-column: 10/11;
+            grid-row: 1/3;
+            background-color: white;
+        }
+        .childcontainer8 .color15{
+            grid-column: 11/12;
+            grid-row: 1/3;
+            background-color: white;
+        }
+        .childcontainer8 .color16{
+            grid-column: 6/9;
+            grid-row: 3/5;
+            background-color: white;
+        }
+        .childcontainer8 .color17{
+            grid-column: 9/11;
+            grid-row: 3/5;
+            background-color: white;
+        }
+        .childcontainer8 .color18{
+            grid-column: 11/12;
+            grid-row: 3/5;
+            background-color: white;
+        }
+        .childcontainer8 .color19{
+            grid-column: 1/2;
+            grid-row: 5/7;
+            background-color: white;
+        }
+        .childcontainer8 .color20{
+            grid-column: 4/6;
+            grid-row: 5/6;
+            background-color: white;
+        }
+        .childcontainer8 .color21{
+            grid-column: 4/6;
+            grid-row: 6/7;
+            background-color: white;
+        }
+        .childcontainer8 .color22{
+            grid-column: 9/11;
+            grid-row: 5/7;
+            background-color: white;
+        }
+        .childcontainer8 .color23{
+            grid-column: 11/12;
+            grid-row: 5/7;
+            background-color: white;
+        }
+        .childcontainer8 .color24{
+            grid-column: 2/6;
+            grid-row: 7/8;
+            background-color: white;
+        }
+        .childcontainer8 .color25{
+            grid-column: 3/5;
+            grid-row: 3/4;
+            background-color: white;
+        }
+        .childcontainer8 div{
+            background-color: aliceblue;
+        }
+        .childcontainer9{
+            background-color: black;
+            display: grid;
+            padding: 5px;
+            grid-template-columns: repeat(10,27.5px);
+            grid-template-rows: 35px 35px 35px 16px 16px 35px 35px 35px ;
+            gap: 4px;
+        }
+        .childcontainer9 .color1{
+            grid-column: 1/4;
+            grid-row: 1/3;
+            background-color: yellow;
+        }
+        .childcontainer9 .color2{
+            grid-column: 1/2;
+            grid-row: 5/7;
+            background-color: yellow;
+        }
+        .childcontainer9 .color3{
+            grid-column: 1/4;
+            grid-row: 8/9;
+            background-color: yellow;
+        }
+        .childcontainer9 .color4{
+            grid-column: 3/4;
+            grid-row: 5/7;
+            background-color: blue;
+        }
+        .childcontainer9 .color5{
+            grid-column: 8/9;
+            grid-row: 5/7;
+            background-color: blue;
+        }
+        .childcontainer9 .color6{
+            grid-column: 5/6;
+            grid-row: 1/2;
+            background-color: blue;
+        }
+        .childcontainer9 .color7{
+            grid-column: 4/5;
+            grid-row: 1/3;
+            background-color: white;
+        }
+        .childcontainer9 .color8{
+            grid-column: 8/11;
+            grid-row: 1/3;
+            background-color: white;
+        }
+        .childcontainer9 .color9{
+            grid-column: 1/2;
+            grid-row: 3/5;
+            background-color: white;
+        }
+        .childcontainer9 .color10{
+            grid-column: 2/3;
+            grid-row: 3/5;
+            background-color: white;
+        }
+        .childcontainer9 .color11{
+            grid-column: 3/4;
+            grid-row: 3/5;
+            background-color: white;
+        }
+        .childcontainer9 .color12{
+            grid-column: 2/3;
+            grid-row: 5/7;
+            background-color: white;
+        }
+        .childcontainer9 .color13{
+            grid-column: 4/5;
+            grid-row: 3/7;
+            background-color: white;
+        }
+        .childcontainer9 .color14{
+            grid-column: 5/8;
+            grid-row: 4/6;
+            background-color: white;
+        }
+        .childcontainer9 .color15{
+            grid-column: 8/9;
+            grid-row: 3/5;
+            background-color: white;
+        }
+        .childcontainer9 .color16{
+            grid-column: 9/10;
+            grid-row: 5/7;
+            background-color: white;
+        }
+        .childcontainer9 .color17{
+            grid-column: 10/11;
+            grid-row: 3/5;
+            background-color: white;
+        }
+        .childcontainer9 .color18{
+            grid-column: 10/11;
+            grid-row: 5/7;
+            background-color: white;
+        }
+        .childcontainer9 .color19{
+            grid-column: 1/4;
+            grid-row: 7/8;
+            background-color: white;
+        }
+        .childcontainer9 .color20{
+            grid-column: 5/8;
+            grid-row: 7/8;
+            background-color: white;
+        }
+        .childcontainer9 .color21{
+            grid-column: 8/11;
+            grid-row: 7/8;
+            background-color: white;
+        }
+        .childcontainer9 .color22{
+            grid-column: 5/8;
+            grid-row: 8/9;
+            background-color: white;
+        }
+        .childcontainer9 .color23{
+            grid-column: 8/11;
+            grid-row: 8/9;
+            background-color: white;
+        }
+        .childcontainer9 .color24{
+            grid-column: 5/8;
+            grid-row: 3/4;
+            background-color: red;
+        }
+        .childcontainer9 .color25{
+            grid-column: 5/8;
+            grid-row: 6/7;
+            background-color: red;
+        }
+        .childcontainer9 .color26{
+            grid-column: 9/10;
+            grid-row: 3/5;
+            background-color: red;
+        }
+        .childcontainer9 div{
+            background-color: aliceblue;
+        }
+        .childcontainer10{
+            background-color: black;
+            display: grid;
+            padding: 5px;
+            grid-template-columns: repeat(5,58px);
+            grid-template-rows: repeat(6,41px);
+            gap: 5px;
+        }
+        .childcontainer10 .color1{
+            grid-column: 2/3;
+            grid-row: 1/2;
+            background-color: red;
+        }
+        .childcontainer10 .color2{
+            grid-column: 3/4;
+            grid-row: 3/4;
+            background-color: red;
+        }
+        .childcontainer10 .color3{
+            grid-column: 1/2;
+            grid-row: 6/7;
+            background-color: red;
+        }
+        .childcontainer10 .color4{
+            grid-column: 4/5;
+            grid-row: 1/3;
+            background-color: yellow;
+        }
+        .childcontainer10 .color5{
+            grid-column: 5/6;
+            grid-row: 1/3;
+            background-color: yellow;
+        }
+        .childcontainer10 .color6{
+            grid-column: 1/2;
+            grid-row: 3/4;
+            background-color: yellow;
+        }
+        .childcontainer10 .color7{
+            grid-column: 2/3;
+            grid-row: 4/6;
+            background-color: yellow;
+        }
+        .childcontainer10 .color8{
+            grid-column: 5/6;
+            grid-row: 5/6;
+            background-color: blue;
+        }
+        .childcontainer10 .color9{
+            grid-column: 1/2;
+            grid-row: 1/3;
+            background-color: white;
+        }
+        .childcontainer10 .color10{
+            grid-column: 3/4;
+            grid-row: 1/3;
+            background-color: white;
+        }
+        .childcontainer10 .color11{
+            grid-column: 1/2;
+            grid-row: 4/6;
+            background-color: white;
+        }
+        .childcontainer10 .color12{
+            grid-column: 3/4;
+            grid-row: 4/6;
+            background-color: white;
+        }
+        .childcontainer10 .color13{
+            grid-column: 4/5;
+            grid-row: 4/6;
+            background-color: white;
+        }
+        .childcontainer10 div{
+            background-color: aliceblue;
+        }
+        .childcontainer11{
+            background-color: black;
+            display: grid;
+            padding: 5px;
+            grid-template-columns: 16.5px 16.5px 8px 8px 16.5px 16.5px 16.5px 8px 8px 16.5px;
+            grid-template-rows: repeat(9,25px);
+            gap: 5.4px;
+        }
+        .childcontainer11 .color1{
+            grid-column: 1/2;
+            grid-row: 3/4;
+            background-color: red;
+        }
+        .childcontainer11 .color2{
+            grid-column: 2/6;
+            grid-row: 9/10;
+            background-color: red;
+        }
+        .childcontainer11 .color3{
+            grid-column: 6/7;
+            grid-row: 1/2;
+            background-color: yellow;
+        }
+        .childcontainer11 .color4{
+            grid-column: 2/6;
+            grid-row: 4/6;
+            background-color: yellow;
+        }
+        .childcontainer11 .color5{
+            grid-column: 6/7;
+            grid-row: 4/5;
+            background-color: yellow;
+        }
+        .childcontainer11 .color6{
+            grid-column: 6/7;
+            grid-row: 5/6;
+            background-color: yellow;
+        }
+        .childcontainer11 .color7{
+            grid-column: 7/11;
+            grid-row: 2/3;
+            background-color: blue;
+        }
+        .childcontainer11 .color8{
+            grid-column: 2/6;
+            grid-row: 1/2;
+            background-color: white;
+        }
+        .childcontainer11 .color9{
+            grid-column: 2/6;
+            grid-row: 2/3;
+            background-color: white;
+        }
+        .childcontainer11 .color10{
+            grid-column: 7/11;
+            grid-row: 3/4;
+            background-color: white;
+        }
+        .childcontainer11 .color11{
+            grid-column: 3/5;
+            grid-row: 3/4;
+            background-color: white;
+        }
+        .childcontainer11 .color12{
+            grid-column: 1/2;
+            grid-row: 4/6;
+            background-color: white;
+        }
+        .childcontainer11 .color13{
+            grid-column: 7/11;
+            grid-row: 4/6;
+            background-color: white;
+        }
+        .childcontainer11 .color14{
+            grid-column: 1/2;
+            grid-row: 6/9;
+            background-color: white;
+        }
+        .childcontainer11 .color15{
+            grid-column: 2/4;
+            grid-row: 6/9;
+            background-color: white;
+        }
+        .childcontainer11 .color16{
+            grid-column: 4/6;
+            grid-row: 6/9;
+            background-color: white;
+        }
+        .childcontainer11 .color18{
+            grid-column: 6/7;
+            grid-row: 6/9;
+            background-color: white;
+        }
+        .childcontainer11 .color19{
+            grid-column: 7/9;
+            grid-row: 6/7;
+            background-color: white;
+        }
+        .childcontainer11 .color20{
+            grid-column: 7/9;
+            grid-row: 7/8;
+            background-color: white;
+        }
+        .childcontainer11 .color21{
+            grid-column: 7/9;
+            grid-row: 8/9;
+            background-color: white;
+        }
+        .childcontainer11 .color22{
+            grid-column: 9/11;
+            grid-row: 6/7;
+            background-color: white;
+        }
+        .childcontainer11 .color23{
+            grid-column: 9/11;
+            grid-row: 7/8;
+            background-color: white;
+        }
+        .childcontainer11 .color24{
+            grid-column: 9/11;
+            grid-row: 8/9;
+            background-color: white;
+        }
+        .childcontainer11 .color25{
+            grid-column: 8/10;
+            grid-row: 1/2;
+            background-color: white;
+        }
+        .childcontainer11 .color26{
+            grid-column: 7/11;
+            grid-row: 9/10;
+            background-color: white;
+        }
+        .childcontainer11 div{
+            background-color: aliceblue;
+        }
+        .childcontainer12{
+            background-color: black;
+            display: grid;
+            padding: 5px;
+            grid-template-columns: 26px 26px 26px 13px 13px 26px 26px 26px 26px 26px 26px ;
+            grid-template-rows: repeat(7,34px);
+            gap: 5px;
+        }
+        .childcontainer12 .color1{
+            grid-column: 6/7;
+            grid-row: 1/2;
+            background-color: red;
+        }
+        .childcontainer12 .color2{
+            grid-column: 2/3;
+            grid-row: 6/8;
+            background-color: red;
+        }
+        .childcontainer12 .color3{
+            grid-column: 3/5;
+            grid-row: 5/6;
+            background-color: red;
+        }
+        .childcontainer12 .color4{
+            grid-column: 8/9;
+            grid-row: 4/6;
+            background-color: red;
+        }
+        .childcontainer12 .color5{
+            grid-column: 1/2;
+            grid-row: 2/4;
+            background-color: blue;
+        }
+        .childcontainer12 .color6{
+            grid-column: 1/2;
+            grid-row: 4/6;
+            background-color: blue;
+        }
+        .childcontainer12 .color7{
+            grid-column: 7/8;
+            grid-row: 4/6;
+            background-color: blue;
+        }
+        .childcontainer12 .color8{
+            grid-column: 11/12;
+            grid-row: 4/6;
+            background-color: yellow;
+        }
+        .childcontainer12 .color9{
+            grid-column: 1/2;
+            grid-row: 6/8;
+            background-color: white;
+        }
+        .childcontainer12 .color10{
+            grid-column: 2/3;
+            grid-row: 2/4;
+            background-color: white;
+        }
+        .childcontainer12 .color11{
+            grid-column: 2/3;
+            grid-row: 4/6;
+            background-color: white;
+        }
+        .childcontainer12 .color12{
+            grid-column: 4/6;
+            grid-row: 1/2;
+            background-color: white;
+        }
+        .childcontainer12 .color13{
+            grid-column: 3/7;
+            grid-row: 2/4;
+            background-color: white;
+        }
+        .childcontainer12 .color14{
+            grid-column: 3/5;
+            grid-row: 4/5;
+            background-color: white;
+        }
+        .childcontainer12 .color15{
+            grid-column: 5/7;
+            grid-row: 4/5;
+            background-color: white;
+        }
+        .childcontainer12 .color16{
+            grid-column: 5/7;
+            grid-row: 5/6;
+            background-color: white;
+        }
+        .childcontainer12 .color17{
+            grid-column: 3/7;
+            grid-row: 6/8;
+            background-color: white;
+        }
+        .childcontainer12 .color18{
+            grid-column: 7/8;
+            grid-row: 2/4;
+            background-color: white;
+        }
+        .childcontainer12 .color19{
+            grid-column: 7/8;
+            grid-row: 6/8;
+            background-color: white;
+        }
+        .childcontainer12 .color20{
+            grid-column: 8/11;
+            grid-row: 1/2;
+            background-color: white;
+        }
+        .childcontainer12 .color21{
+            grid-column: 8/11;
+            grid-row: 2/3;
+            background-color: white;
+        }
+        .childcontainer12 .color22{
+            grid-column: 8/11;
+            grid-row: 3/4;
+            background-color: white;
+        }
+        .childcontainer12 .color23{
+            grid-column: 8/11;
+            grid-row: 6/8;
+            background-color: white;
+        }
+        .childcontainer12 .color24{
+            grid-column: 9/10;
+            grid-row: 4/6;
+            background-color: white;
+        }
+        .childcontainer12 .color25{
+            grid-column: 10/11;
+            grid-row: 4/6;
+            background-color: white;
+        }
+        .childcontainer12 .color26{
+            grid-column: 11/12;
+            grid-row: 2/4;
+            background-color: white;
+        }
+
+        .childcontainer12 div{
+            background-color: aliceblue;
+        }
+
+
+
+</style>    
+</head>
+<body>
+    <div class="parentcontainer1">
+        <div class="childcontainer1">
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <div class="color3"></div>
+            <div class="color4"></div>
+            <div class="color5"></div>
+            <div class="color6"></div>
+            <div class="color7"></div>
+            <div class="color8"></div>
+            <div class="color9"></div>
+            <div class="color10"></div>
+            <div class="color11"></div>
+            <div class="color12"></div>
+            <div class="color13"></div>
+            <div class="color14"></div>
+            <div class="color15"></div>
+            <div class="color16"></div>
+            <div class="color17"></div>
+            <div class="color18"></div>
+            <div class="color19"></div>
+            <div class="color20"></div>
+            <div class="color21"></div>
+            <div class="color22"></div>
+            <div class="color23"></div>
+            <div class="color24"></div>
+            <div class="color25"></div>
+            <div class="color26"></div>
+            <div class="color27"></div>
+        </div>
+        <div class="childcontainer2">
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <div class="color3"></div>
+            <div class="color4"></div>
+            <div class="color5"></div>
+            <div class="color6"></div>
+            <div class="color7"></div>
+            <div class="color8"></div>
+            <div class="color9"></div>
+            <div class="color10"></div>
+            <div class="color11"></div>
+            <div class="color12"></div>
+            <div class="color13"></div>
+            <div class="color14"></div>
+            <div class="color15"></div>
+            <div class="color16"></div>
+            <div class="color17"></div>
+            <div class="color18"></div>
+            <div class="color19"></div>
+            <div class="color20"></div>
+            <div class="color21"></div>
+            <div class="color22"></div>
+            <div class="color23"></div>
+            <div class="color24"></div>
+            <div class="color25"></div>
+            <div class="color26"></div>
+            <div class="color27"></div>
+            <div class="color28"></div>
+            <div class="color29"></div>
+            <div class="color30"></div>
+            <div class="color31"></div>
+            <div class="color32"></div>
+            <div class="color33"></div>
+            <div class="color34"></div>
+            <div class="color35"></div>
+            <div class="color36"></div>
+            <div class="color37"></div>
+            <div class="color38"></div>
+            <div class="color39"></div>
+            <div class="color40"></div>
+            <div class="color41"></div>
+            <div class="color42"></div>
+            <div class="color43"></div>
+            <div class="color44"></div>
+            <div class="color45"></div>
+            <div class="color46"></div>
+            <div class="color47"></div>
+            <div class="color48"></div>
+            <div class="color49"></div>
+            <div class="color50"></div>
+            <div class="color51"></div>
+            
+        </div>
+        <div class="childcontainer3">
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <div class="color3"></div>
+            <div class="color4"></div>
+            <div class="color5"></div>
+            <div class="color6"></div>
+            <div class="color7"></div>
+            <div class="color8"></div>
+            <div class="color9"></div>
+            <div class="color10"></div>
+            <div class="color11"></div>
+            <div class="color12"></div>
+            <div class="color13"></div>
+            <div class="color14"></div>
+            <div class="color15"></div>
+            <div class="color16"></div>
+            <div class="color17"></div>
+            <div class="color18"></div>
+            <div class="color19"></div>
+            <div class="color20"></div>
+            <div class="color21"></div>
+            <div class="color22"></div>
+            <div class="color23"></div>
+            <div class="color24"></div>
+            <div class="color25"></div>
+            <div class="color26"></div>
+            <div class="color27"></div>
+            <div class="color28"></div>
+            <div class="color29"></div>
+            <div class="color30"></div>
+            <div class="color31"></div>
+            <div class="color32"></div>
+        </div>
+        <div class="childcontainer4">
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <div class="color3"></div>
+            <div class="color4"></div>
+            <div class="color5"></div>
+            <div class="color6"></div>
+            <div class="color7"></div>
+            <div class="color8"></div>
+            <div class="color9"></div>
+            <div class="color10"></div>
+            <div class="color11"></div>
+            <div class="color12"></div>
+            <div class="color13"></div>
+            <div class="color14"></div>
+            <div class="color15"></div>
+            <div class="color16"></div>
+            <div class="color17"></div>
+            <div class="color18"></div>
+            <div class="color19"></div>
+            <div class="color20"></div>
+            <div class="color21"></div>
+            <div class="color22"></div>
+            <div class="color23"></div>
+            <div class="color24"></div>
+            <div class="color25"></div>
+            <div class="color26"></div>
+            <div class="color27"></div>
+            <div class="color28"></div>
+            <div class="color29"></div>
+            <div class="color30"></div>
+            <div class="color31"></div>
+            <div class="color32"></div>
+        </div>
+        <div class="childcontainer5">
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <div class="color3"></div>
+            <div class="color4"></div>
+            <div class="color5"></div>
+            <div class="color6"></div>
+            <div class="color7"></div>
+            <div class="color8"></div>
+            <div class="color9"></div>
+            <div class="color10"></div>
+            <div class="color11"></div>
+            <div class="color12"></div>
+            <div class="color13"></div>
+            <div class="color14"></div>
+            <div class="color15"></div>
+            <div class="color16"></div>
+            <div class="color17"></div>
+            <div class="color18"></div>
+            <div class="color19"></div>
+            <div class="color20"></div>
+            <div class="color21"></div>
+            <div class="color22"></div>
+            <div class="color23"></div>
+            <div class="color24"></div>
+            <div class="color25"></div>
+            <div class="color26"></div>
+            <div class="color27"></div>
+            <div class="color28"></div>
+            <div class="color29"></div>
+            <div class="color30"></div>
+            <div class="color31"></div>
+            <div class="color32"></div>
+            <div class="color33"></div>
+            <div class="color34"></div>
+            <div class="color35"></div>
+            <div class="color36"></div>
+            <div class="color37"></div>
+            <div class="color38"></div>
+            <div class="color39"></div>
+            <div class="color40"></div>
+            <div class="color41"></div>
+            <div class="color42"></div>
+            <div class="color43"></div>
+            <div class="color44"></div>
+            <div class="color45"></div>
+            <div class="color46"></div>
+            <div class="color47"></div>
+            <div class="color48"></div>
+            <div class="color49"></div>
+            <div class="color50"></div>
+            <div class="color51"></div>
+        </div>
+        <div class="childcontainer6">
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <div class="color3"></div>
+            <div class="color4"></div>
+            <div class="color5"></div>
+            <div class="color6"></div>
+            <div class="color7"></div>
+            <div class="color8"></div>
+            <div class="color9"></div>
+            <div class="color10"></div>
+            <div class="color11"></div>
+            <div class="color12"></div>
+            <div class="color13"></div>
+            <div class="color14"></div>
+            <div class="color15"></div>
+            <div class="color16"></div>
+            <div class="color17"></div>
+            <div class="color18"></div>
+            <div class="color19"></div>
+            <div class="color20"></div>
+            <div class="color21"></div>
+            <div class="color22"></div>
+            <div class="color23"></div>
+            <div class="color24"></div>
+            <div class="color25"></div>
+            <div class="color26"></div>
+            <div class="color27"></div>
+            <div class="color28"></div>
+            <div class="color29"></div>
+            <div class="color30"></div>
+            <div class="color31"></div>
+            <div class="color32"></div>
+            <div class="color33"></div>
+            <div class="color34"></div>
+            <div class="color35"></div>
+            <div class="color36"></div>
+        </div>
+        <div class="childcontainer7">
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <div class="color3"></div>
+            <div class="color4"></div>
+            <div class="color5"></div>
+            <div class="color6"></div>
+            <div class="color7"></div>
+            <div class="color8"></div>
+            <div class="color9"></div>
+            <div class="color10"></div>
+            <div class="color11"></div>
+            <div class="color12"></div>
+            <div class="color13"></div>
+            <div class="color14"></div>
+            <div class="color15"></div>
+            <div class="color16"></div>
+            <div class="color17"></div>
+            <div class="color18"></div>
+            <div class="color19"></div>
+            <div class="color20"></div>
+            <div class="color21"></div>
+            <div class="color22"></div>
+            <div class="color23"></div>
+            <div class="color24"></div>
+            <div class="color25"></div>
+            <div class="color26"></div>
+            <div class="color27"></div>
+            <div class="color28"></div>
+            <div class="color29"></div>
+            <div class="color30"></div>
+            <div class="color31"></div>
+            <div class="color32"></div>
+            <div class="color33"></div>
+            <div class="color34"></div>
+            <div class="color35"></div>
+            <div class="color36"></div>
+            <div class="color37"></div>
+            <div class="color38"></div>
+            <div class="color39"></div>
+            <div class="color40"></div>
+            <div class="color41"></div>
+            
+        </div>
+        <div class="childcontainer8">
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <div class="color3"></div>
+            <div class="color4"></div>
+            <div class="color5"></div>
+            <div class="color6"></div>
+            <div class="color7"></div>
+            <div class="color8"></div>
+            <div class="color9"></div>
+            <div class="color10"></div>
+            <div class="color11"></div>
+            <div class="color12"></div>
+            <div class="color13"></div>
+            <div class="color14"></div>
+            <div class="color15"></div>
+            <div class="color16"></div>
+            <div class="color17"></div>
+            <div class="color18"></div>
+            <div class="color19"></div>
+            <div class="color20"></div>
+            <div class="color21"></div>
+            <div class="color22"></div>
+            <div class="color23"></div>
+            <div class="color24"></div>
+            <div class="color25"></div>
+            <div class="color26"></div>
+            <div class="color27"></div>
+            <div class="color28"></div>
+            <div class="color29"></div>
+            <div class="color30"></div>
+            <div class="color31"></div>
+            <div class="color32"></div>
+            <div class="color33"></div>
+            <div class="color34"></div>
+            <div class="color35"></div>
+            <div class="color36"></div>
+        </div>
+        <div class="childcontainer9">
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <div class="color3"></div>
+            <div class="color4"></div>
+            <div class="color5"></div>
+            <div class="color6"></div>
+            <div class="color7"></div>
+            <div class="color8"></div>
+            <div class="color9"></div>
+            <div class="color10"></div>
+            <div class="color11"></div>
+            <div class="color12"></div>
+            <div class="color13"></div>
+            <div class="color14"></div>
+            <div class="color15"></div>
+            <div class="color16"></div>
+            <div class="color17"></div>
+            <div class="color18"></div>
+            <div class="color19"></div>
+            <div class="color20"></div>
+            <div class="color21"></div>
+            <div class="color22"></div>
+            <div class="color23"></div>
+            <div class="color24"></div>
+            <div class="color25"></div>
+            <div class="color26"></div>
+            <div class="color27"></div>
+            <div class="color28"></div>
+            <div class="color29"></div>
+            <div class="color30"></div>
+            <div class="color31"></div>
+            <div class="color32"></div>
+            <div class="color33"></div>
+        </div>
+        <div class="childcontainer10">
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <div class="color3"></div>
+            <div class="color4"></div>
+            <div class="color5"></div>
+            <div class="color6"></div>
+            <div class="color7"></div>
+            <div class="color8"></div>
+            <div class="color9"></div>
+            <div class="color10"></div>
+            <div class="color11"></div>
+            <div class="color12"></div>
+            <div class="color13"></div>
+            <div class="color14"></div>
+            <div class="color15"></div>
+            <div class="color16"></div>
+            <div class="color17"></div>
+            <div class="color18"></div>
+            <div class="color19"></div>
+            <div class="color20"></div>
+            <div class="color21"></div>
+            <div class="color22"></div>
+        </div>
+        <div class="childcontainer11">
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <div class="color3"></div>
+            <div class="color4"></div>
+            <div class="color5"></div>
+            <div class="color6"></div>
+            <div class="color7"></div>
+            <div class="color8"></div>
+            <div class="color9"></div>
+            <div class="color10"></div>
+            <div class="color11"></div>
+            <div class="color12"></div>
+            <div class="color13"></div>
+            <div class="color14"></div>
+            <div class="color15"></div>
+            <div class="color16"></div>
+            <div class="color17"></div>
+            <div class="color18"></div>
+            <div class="color19"></div>
+            <div class="color20"></div>
+            <div class="color21"></div>
+            <div class="color22"></div>
+            <div class="color23"></div>
+            <div class="color24"></div>
+            <div class="color25"></div>
+            <div class="color26"></div>
+            <div class="color27"></div>
+            <div class="color28"></div>
+            <div class="color29"></div>
+            <div class="color30"></div>
+            <div class="color31"></div>
+            <div class="color32"></div>
+            <div class="color33"></div>
+            <div class="color34"></div>
+            <div class="color35"></div>
+        </div>
+        <div class="childcontainer12">
+            <div class="color1"></div>
+            <div class="color2"></div>
+            <div class="color3"></div>
+            <div class="color4"></div>
+            <div class="color5"></div>
+            <div class="color6"></div>
+            <div class="color7"></div>
+            <div class="color8"></div>
+            <div class="color9"></div>
+            <div class="color10"></div>
+            <div class="color11"></div>
+            <div class="color12"></div>
+            <div class="color13"></div>
+            <div class="color14"></div>
+            <div class="color15"></div>
+            <div class="color16"></div>
+            <div class="color17"></div>
+            <div class="color18"></div>
+            <div class="color19"></div>
+            <div class="color20"></div>
+            <div class="color21"></div>
+            <div class="color22"></div>
+            <div class="color23"></div>
+            <div class="color24"></div>
+            <div class="color25"></div>
+            <div class="color26"></div>
+            <div class="color27"></div>
+            <div class="color28"></div>
+            <div class="color29"></div>
+            <div class="color30"></div>
+            <div class="color31"></div>
+            <div class="color32"></div>
+            <div class="color33"></div>
+        </div>
+
+
+
+
+    </div>
+    
+    
+</body>
+</html>
